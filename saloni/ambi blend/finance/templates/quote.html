@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <h1> Search for stock price quotations </h1>
+    <br>
+    <form action="/quote" method="post">
+        <input type="text" name="symbol" id="symbol" placeholder="Enter company symbol">
+        <button class="btn btn-primary" type="submit">Fetch Quote</button>
+    </form>
+    {% if quote %}
+    <br><br>
+    <h3> Stock symbol: {{ quote["symbol"] }} </h3>
+    <p> Price: {{ quote["price"] |usd}} in USD </p>
+    {%  endif %}
+{% endblock %}

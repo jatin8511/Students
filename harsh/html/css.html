@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            font-family: 'Agdasima', sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hello world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugiat laboriosam rerum veniam delectus itaque
+        perspiciatis nisi! Quaerat aliquid quo eos illum magni voluptate! Ipsam dolor laboriosam est accusamus cumque!
+    </p>
+
+    <style>
+        button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border:none;
+            position: relative;
+
+        }
+
+        button::before{
+            content: 'Add To Cart';
+            background-color: rgba(0, 255, 13, 0.815);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 0;
+            overflow: hidden;
+            width: 100%;
+            bottom: 50%;
+            transition: .3s;
+            left: 0;
+        }
+        button:hover::before{
+            height: 100%;
+            bottom: 0;
+
+        }
+    </style>
+    <button>Add To Cart</button>
+
+</body>
+
+</html>

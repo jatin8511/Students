@@ -1,0 +1,10 @@
+.home h1 {
+    color: red;
+    text-align: center;
+}
+
+.home img {
+    width: 50%;
+    margin: 20px auto;
+    display: block;
+}

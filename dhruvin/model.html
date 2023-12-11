@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.245);
+            display: grid;
+            place-items: center;
+        }
+
+        .main {
+            background-color: white;
+            height: 90vh;
+            width: 80vw;
+
+        }
+
+        .header {
+            background-color: rgb(8, 89, 48);
+            height: 20%;
+        }
+
+        .content .profile{
+            width: 150px;
+            margin: auto;
+            transform: translate(0,-30%);
+           text-align: center;
+            
+        }
+        .profile .img img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .list p{
+            padding: 10px ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="header">
+
+            </div>
+            <div class="content">
+                <div class="profile">
+                    <div class="img">
+                        <img src="https://images.alphacoders.com/940/thumb-1920-940147.jpg" alt="">
+                    </div>
+                    <h3>magan nu bairu</h3>
+                    <div class="socialLinks">
+                        <span>0</span>
+                        <span>0</span>
+                        <span>0</span>
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="col1">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="col2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                      
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

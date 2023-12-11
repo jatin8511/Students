@@ -1,0 +1,17 @@
+.heading {
+  color: red;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.wrapper img {
+  width: 100%;
+}
+
+.wrapper .product {
+  border: 1px solid gray;
+}

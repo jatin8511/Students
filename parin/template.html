@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+
+            height: 80px;
+            padding: 0 100px;
+            align-items: center;
+        }
+
+        .navbar .navlinks {
+            display: flex;
+            gap: 40px;
+        }
+
+        .navbar .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .home .first img {
+            width: 100%;
+        }
+
+        .home {
+            padding: 0 70px;
+        }
+
+        .home .section2 {
+            padding: 0 70px;
+        }
+
+        .cardsWrapper {
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .cardsWrapper img {
+            width: 100%;
+        }
+
+        .cardsWrapper p,
+        .cardsWrapper h3 {
+            text-align: center;
+        }
+
+        .about {
+            background-image: url('img1.jpg');
+            height: 70vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about p,
+        .about h3 {
+            text-align: center;
+            color: red;
+            font-size: 25px;
+        }
+
+        .about button {
+            margin: 0 auto;
+            display: block;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1 class="icon">
+            INDIGO
+        </h1>
+
+        <div class="navlinks">
+            <p>HOME</p>
+            <p>PAGES</p>
+            <p>SHOP</p>
+            <p>PORTFOLIO</p>
+            <p>BLOG</p>
+            <p>ELEMENTS</p>
+        </div>
+
+        <div class="icons">
+            <p><i class="fa-solid fa-cart-shopping"></i></p>
+            <p><i class="fa-solid fa-heart"></i></p>
+            <p><i class="fa-solid fa-magnifying-glass"></i></p>
+            <p><i class="fa-solid fa-bars"></i></p>
+        </div>
+    </div>
+
+    <div class="home">
+        <div class="first">
+            <img src="https://th.bing.com/th/id/OIP.OF59vsDmwxPP1tw7b_8clQHaE8?pid=ImgDet&rs=1" alt="">
+        </div>
+
+        <div class="section2">
+
+
+            <div class="threeImages">
+                <p>Featured items</p>
+                <div class="cardsWrapper">
+                    <div class="card">
+                        <div class="img">
+                            <img src="img1.jpg" alt="">
+                        </div>
+                        <h3>Lorem ipsum dolor sit.</h3>
+                        <p>$100</p>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="img1.jpg" alt="">
+                        </div>
+                        <h3>Lorem ipsum dolor sit.</h3>
+                        <p>$100</p>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="img1.jpg" alt="">
+                        </div>
+                        <h3>Lorem ipsum dolor sit.</h3>
+                        <p>$100</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about">
+                <div>
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button>Add to cart</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

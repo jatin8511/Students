@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            text-align: center;
+        }
+
+        .productsWrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product {
+
+            box-shadow: 0 3px 10px rgb(231, 231, 231);
+
+            padding: 20px;
+        }
+
+
+        .product img {
+            width: 100%;
+        }
+
+        .product button {
+            background-color: black;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .box {
+            height: 100px;
+            width: 10%;
+            background-color: red;
+            margin: 10px;
+        }
+
+        .container {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            height: 50vh;
+            align-items: center;
+        }
+
+        @media screen and (max-width:1000px) {
+            .productsWrapper {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+        }
+
+        @media screen and (max-width:600px) {
+            .productsWrapper {
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            .productsWrapper .product h2 {
+                font-size: 18px;
+            }
+
+            .heading {
+                font-size: 20px;
+            }
+
+        }
+
+        @media screen and (max-width:500px) {
+            .productsWrapper {
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+    <div class="container">
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+    </div> -->
+
+    <h1 class="heading">Products</h1>
+
+
+    <div class="productsWrapper">
+
+        <div class="product">
+            <div class="img">
+                <img src="https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/7/Y/7Y898PA-1_T1686800012.png"
+                    alt="">
+            </div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>₹999999</p>
+            <div class="add">
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="img">
+                <img src="https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/7/Y/7Y898PA-1_T1686800012.png"
+                    alt="">
+            </div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>₹999999</p>
+            <div class="add">
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="img">
+                <img src="https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/7/Y/7Y898PA-1_T1686800012.png"
+                    alt="">
+            </div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>₹999999</p>
+            <div class="add">
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="img">
+                <img src="https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/7/Y/7Y898PA-1_T1686800012.png"
+                    alt="">
+            </div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>₹999999</p>
+            <div class="add">
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="img">
+                <img src="https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/7/Y/7Y898PA-1_T1686800012.png"
+                    alt="">
+            </div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>₹999999</p>
+            <div class="add">
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="img">
+                <img src="https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/7/Y/7Y898PA-1_T1686800012.png"
+                    alt="">
+            </div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>₹999999</p>
+            <div class="add">
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="img">
+                <img src="https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/7/Y/7Y898PA-1_T1686800012.png"
+                    alt="">
+            </div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>₹999999</p>
+            <div class="add">
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="img">
+                <img src="https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/7/Y/7Y898PA-1_T1686800012.png"
+                    alt="">
+            </div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>₹999999</p>
+            <div class="add">
+                <button>Add To Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

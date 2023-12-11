@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Javascript Functions</h1>
+    <h3 id="res">Result</h3>
+
+
+
+    <script>
+        let res = document.getElementById('res')
+        function Hello(name) {
+            return 'hello ' + name
+        }
+
+        const Griteent = name => 'good morning ' + name
+
+        console.log(Hello('jatin'))
+        res.innerHTML = Griteent('vijay')
+    </script>
+</body>
+
+</html>

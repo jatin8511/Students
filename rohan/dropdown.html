@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: black;
+            padding: 10px;
+        }
+
+        .navbar ul li {
+            color: white;
+            list-style: none;
+        }
+
+        .navbar ul {
+            display: flex;
+            gap: 10px;
+        }
+        .navbar .drop{
+            position: relative;
+        }
+        .navbar .drop:hover .dropdown{
+            display: block;
+        }
+        .navbar .drop .dropdown{
+            width: 200px;
+            position: absolute;
+            top: 100%;
+            display: none;
+            padding: 10px;
+            background-color: red;
+        }
+        .dropdown p{
+            padding: 10px 0;
+        }
+        .dropdown p:hover{
+            background-color: white;
+            color: black;
+        }
+    </style>
+
+    <div class="navbar">
+
+        <ul>
+            <li>Home</li>
+            <li class="drop">About
+                <div class="dropdown">
+                    <p>web developer</p>
+                    <p>web developer</p>
+                    <p>web developer</p>
+
+                </div>
+
+            </li>
+            <li>Contact</li>
+        </ul>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

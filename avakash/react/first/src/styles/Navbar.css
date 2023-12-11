@@ -1,0 +1,8 @@
+.links p a {
+    text-decoration: none;
+    color: black;
+}
+
+.links p .active {
+    color: red;
+}

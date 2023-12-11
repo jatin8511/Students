@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="maahi">Arrays</h1>
+
+
+    <h3 class="result" id="result">result</h3>
+
+    <h1 class="maahi">Jatin</h1>
+    <p class="maahi">Lorem ipsum dolor sit amet.</p>
+
+    <script>
+        let students = ['jatin', 'harsh', 'tisha', 'aditya', 'deven', 'magan']
+        let numbers = [32342, 42, 423, 4322, 43233, 543, 211, 23235, 346, 52314, 2524, 52523, 42345, 2]
+
+        students.sort()
+        students.reverse()
+
+        numbers.sort(function (a, b) {
+            return b - a
+        })
+
+
+        let result = document.getElementById('result')
+        // result.innerHTML = students[2] + ' | ' + students[4]
+
+
+        // students.push('maahi')
+        // students.pop()
+        // students.shift()
+        // students.unshift('maahi')
+
+        // let part = students.slice(0, 4)
+
+        // students.splice(2, 1, 'maahi')
+
+
+
+        // for (let i = 0; i < students.length; i++) {
+        //     result.innerHTML += '<li>' + students[i] + '</li>'
+        // }
+        // for (let x of students) {
+        //     result.innerHTML += '<li>' + x + '</li>'
+        // }
+
+        let randomVal = Math.floor(Math.random() * 1000) //geranate random numbers
+        let total = [...students, ...numbers, randomVal]  //spread operator
+
+        // for (x of total) {
+        //     console.log(x)
+        // }
+
+        result.innerHTML = total.map(
+            (x) => {
+                return '<li>' + x + '</li>'
+            }).join('')
+
+
+        // result.innerHTML = students
+
+        let age = 13
+
+
+        // age >= 18 ? alert('you are elegible') : alert('you are too young')
+
+
+        try {
+            if (age > 18) {
+                throw 'age is available'
+            } else {
+                throw 'age is  not available'
+
+            }
+        } catch (e) {
+            result.innerHTML = e
+        }
+
+
+        let classess = document.getElementsByClassName('maahi')
+
+        classess[2].innerHTML = 'kai bi'
+
+
+
+    </script>
+
+
+</body>
+
+</html>

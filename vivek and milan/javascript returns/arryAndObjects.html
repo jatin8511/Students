@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .wrapper {
+            display: grid;
+            gap: 20px;
+            padding: 100px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .student {
+            box-shadow: 0 3px 10px gray;
+            padding: 15px;
+        }
+
+        .student img {
+            width: 100%;
+        }
+
+        .cart {
+            height: 100vh;
+            width: 70%;
+            position: fixed;
+            background-color: gray;
+            left: -110%;
+            top: 0;
+            transition: .5s;
+        }
+
+        .cart .cartHead {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            align-items: center;
+            border-bottom: 1px solid red;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 50px;
+            align-items: center;
+            box-shadow: 0 3px 10px gray;
+        }
+
+        .cartWrapper {
+            height: 80vh;
+            overflow: auto;
+        }
+
+        .cartWrapper img {
+            width: 100%;
+        }
+
+        .cartProduct {
+            display: grid;
+            grid-template-columns: 150px 40% auto auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cart" id="cart">
+        <div class="cartHead">
+            <h3>Cart</h3>
+            <i onclick="HideCart()" class="fa-solid fa-x"></i>
+        </div>
+        <div id="cartWrapper" class="cartWrapper">
+
+        </div>
+
+    </div>
+
+    <div class="navbar">
+        <h1>Navbar</h1>
+        <ul>
+            <li>Home</li>
+            <li>
+                <input id="searchVal" type="search">
+                <button onclick="Search()">Search</button>
+            </li>
+        </ul>
+        <div class="icon">
+            <i onclick="ShowCart()" class="fa-solid fa-shopping-cart"></i>
+        </div>
+    </div>
+
+    <div class="wrapper" id="wrapper">
+
+    </div>
+    <script>
+        let cartWrapper = document.getElementById('cartWrapper')
+        let wrapper = document.getElementById('wrapper')
+        let cart = document.getElementById('cart')
+        // let students = ['jatin', 'vivek', 'milan', 'magan']
+        const ShowCart = () => {
+            cart.style.left = '0'
+        }
+        const HideCart = () => {
+            cart.style.left = '-110%'
+        }
+        let jatin = {
+            name: 'jatin',
+            age: 20,
+            skill: 'mern stack developer',
+            color: 'black'
+        }
+        // console.log(jatin.skill)
+
+        // students.map((x) => {
+        //     wrapper.innerHTML += '<h3>' + x + '</h3>'
+        // })
+
+        let students = [
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://www.pngarts.com/files/8/Happy-Doraemon-PNG-Image.png'
+                ,
+                id: 1
+            },
+            {
+                name: 'magan',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://www.pngarts.com/files/8/Happy-Doraemon-PNG-Image.png'
+                ,
+                id: 2
+            },
+            {
+                name: 'vivek',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://www.pngarts.com/files/8/Happy-Doraemon-PNG-Image.png'
+                ,
+                id: 3
+            },
+            {
+                name: 'milan',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://www.pngarts.com/files/8/Happy-Doraemon-PNG-Image.png'
+                ,
+                id: 4
+            },
+            {
+                name: 'deven',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://www.pngarts.com/files/8/Happy-Doraemon-PNG-Image.png'
+                ,
+                id: 5
+            },
+            {
+                name: 'chintu',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://www.pngarts.com/files/8/Happy-Doraemon-PNG-Image.png'
+                ,
+                id: 6
+            },
+        ]
+
+        wrapper.innerHTML = students.map((x) => {
+            return ` <div class="student">
+            <div class="img">
+                <img src="${x.img}" alt="">
+            </div>
+            <h3>${x.name}</h3>
+            <h4>${x.skill}</h4>
+            <button onclick='AddToCart(${x.id})'>Add To Cart</button>
+        </div>`
+        }).join('')
+        let cartarray = []
+
+        const AddToCart = (id) => {
+            let obj = students.find((x) => x.id == id)
+            cartarray.push(obj)
+
+
+            cartWrapper.innerHTML = cartarray.map((x) => {
+                return ` <div class="cartProduct">
+            <div class="img">
+                <img src="${x.img}" alt="">
+            </div>
+            <h3>${x.name}</h3>
+            <h4>${x.skill}</h4>
+            <button onclick='remove(${x.id})'>Remove</button>
+        </div>`
+            }).join('')
+        }
+
+
+
+        const remove = (id) => {
+            let newCart = cartarray.filter((x) => x.id != id)
+            cartarray = newCart
+
+            cartWrapper.innerHTML = cartarray.map((x) => {
+                return ` <div class="cartProduct">
+            <div class="img">
+                <img src="${x.img}" alt="">
+            </div>
+            <h3>${x.name}</h3>
+            <h4>${x.skill}</h4>
+            <button onclick='remove(${x.id})'>Remove</button>
+        </div>`
+            }).join('')
+        }
+
+
+        let searchVal = document.getElementById('searchVal')
+        let Search = () => {
+            let searched = students.filter((x) => x.name.toLowerCase().includes(searchVal.value.toLowerCase()))
+
+
+            wrapper.innerHTML = searched.map((x) => {
+                return ` <div class="student">
+            <div class="img">
+                <img src="${x.img}" alt="">
+            </div>
+            <h3>${x.name}</h3>
+            <h4>${x.skill}</h4>
+            <button onclick='AddToCart(${x.id})'>Add To Cart</button>
+        </div>`
+            }).join('')
+        }
+    </script>
+</body>
+
+</html>

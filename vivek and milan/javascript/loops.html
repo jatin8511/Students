@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .usersWrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            padding: 50px;
+        }
+
+        .usersWrapper img {
+            width: 100%;
+        }
+
+        .usersWrapper .user {
+            padding: 20px;
+            box-shadow: 0 3px 10px rgb(225, 225, 225);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello Loops</h1>
+
+    <ul id="nameWrapper">
+
+
+    </ul>
+
+
+    <div class="usersWrapper" id="usersWrapper">
+
+    </div>
+
+
+
+    <script>
+        let nameWrapper = document.getElementById('nameWrapper')
+        let usersWrapper = document.getElementById('usersWrapper')
+        let names = ['jatin', 'magan', 'prit', 'milan', 'vivek']
+
+        let users = [
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'milan',
+                age: 22,
+                skill: 'front end  developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'vivek',
+                age: 21,
+                skill: 'react developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+            {
+                name: 'magan',
+                age: 30,
+                skill: 'not a developer',
+                img: 'https://lh3.googleusercontent.com/-XwIdSo7wEGY/WFCxq-YnD5I/AAAAAAAAAEA/f9kz_B42qvs/s1600/IMG-20150702-WA0006.jpg'
+            },
+        ]
+        usersWrapper.innerHTML = users.map((u) => {
+            return (
+                ` <div class="user">
+            <div class="img">
+                <img src="${u.img}" alt="">
+            </div>
+            <h2>${u.name}</h2>
+            <p>${u.skill}</p>
+        </div>`
+            )
+        }).join('')
+
+        nameWrapper.innerHTML = names.map((n) => {
+            return '<li>' + n + '</li>'
+        }).join('')
+
+
+    </script>
+</body>
+
+</html>

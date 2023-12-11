@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coding hunt</h1>
+
+    <div class="box" id="wrapper">
+
+    </div>
+
+    <script>
+        let students = [
+            'maahi', 'bhavika', 'jatin', 'magan', 'pappu', 'matin'
+        ]
+
+        let nums = [45, 5645, 3, 546, 6, 453, 4, 56, 46543, 32, 356, 2, 1, 135, 645]
+
+
+        // for (let val of nums) {
+        //     console.log(val)
+        // }
+
+
+        class person {
+            constructor(name, age, skill) {
+                this.name = name
+                this.age = age
+                this.skill = skill
+            }
+
+
+            intro() {
+                return 'hello i am ' + this.name + ' and i am a ' + this.skill
+            }
+            
+        }
+
+
+        let jatin = new person('jatin', 20, 'mern stack web developer')
+        let bhavika = new person('bhavika', 20, 'react developer')
+
+        console.log(bhavika.intro())
+
+
+
+    </script>
+</body>
+
+</html>

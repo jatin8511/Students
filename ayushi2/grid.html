@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 300px 400px 300px;
+        }
+
+        .card {
+            background-color: red;
+        }
+
+        .card1 {
+            /* grid-column: span 2; */
+            grid-row: span 2;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="card card1">
+            card
+        </div>
+        <div class="card">
+            card
+        </div>
+        <div class="card">
+            card
+        </div>
+        <div class="card">
+            card
+        </div>
+        <div class="card">
+            card
+        </div>
+        <div class="card">
+            card
+        </div>
+        <div class="card">
+            card
+        </div>
+        <div class="card">
+            card
+        </div>
+        <div class="card">
+            card
+        </div>
+    </div>
+</body>
+
+</html>

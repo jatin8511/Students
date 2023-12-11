@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .dropDown {
+
+            width: 300px;
+            position: relative;
+        }
+
+        .dropHead {
+            background-color: gray;
+            padding: 15px;
+        }
+
+        .drop p {
+            padding: 10px;
+            background-color: rgb(206, 206, 206);
+        }
+
+        .drop p:hover {
+            background-color: gray;
+        }
+
+        .drop {
+            display: none;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            position: absolute;
+        }
+
+        .dropDown:hover .drop {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropDown">
+        <p class="dropHead">Hover Over Me</p>
+        <div class="drop">
+            <p>Item 1</p>
+            <p>Item 1</p>
+            <p>Item 1</p>
+            <p>Item 1</p>
+        </div>
+    </div>
+    <h1>Lorem ipsum dolor sit amet.s</h1>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

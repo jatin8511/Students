@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainHeading {
+            background-color: red;
+            color: white;
+            width: 300px;
+            position: relative;
+            transition: .5s;
+            left: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="mainHeading">Hello World!</h1>
+    <button onclick="Hello()">Click Me</button>
+    <button onclick="Hello2()">
+        click Me 2
+    </button>
+
+
+
+    <div>
+        <img id="img" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+        <br>
+        <button onclick="BulbOn()">On</button>
+        <button onclick="BulbOff()">Off</button>
+    </div>
+
+
+    <script>
+        function Hello() {
+            document.getElementById('mainHeading').innerHTML = 'Parin patel'
+            document.getElementById('mainHeading').style.left = '300px'
+        }
+
+        function Hello2() {
+            // document.getElementById('mainHeading').innerHTML = 'Parin patel'
+            document.getElementById('mainHeading').style.left = '500px'
+        }
+        function BulbOn() {
+            document.getElementById('img').src = 'https://www.w3schools.com/js/pic_bulbon.gif'
+        }
+        function BulbOff() {
+            document.getElementById('img').src = 'https://www.w3schools.com/js/pic_bulboff.gif'
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 onclick="Clear()">Hello World</h1>
+    <button id="btn">Click</button>
+
+    <script>
+        let btn = document.getElementById('btn')
+
+        let magan;
+        btn.addEventListener('click', () => {
+
+            // magan = setTimeout(MyFunc, 3000)
+            magan = setInterval(MyFunc, 1000)
+        })
+
+        const Clear = () => {
+            // clearInterval(magan)
+            clearInterval(magan)
+        }
+
+
+
+        function MyFunc() {
+            console.log('okay')
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

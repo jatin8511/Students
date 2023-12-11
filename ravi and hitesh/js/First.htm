@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <h3 id="result">Result</h3>
+    <button onclick="ButtonClicked()">click</button>
+
+    <script>
+        let result = document.getElementById('result')
+        // var a = 10
+        // let b = 20
+        // b = 400
+        // let name = 'jatin'
+        // const c = 30
+        // result.innerHTML = name
+        // // console.log(a)
+        // function Hello(name) {
+        //     return 'hello ' + name
+        // }
+        // result.innerHTML = Hello('jatin')
+        // // alert(Hello())
+        // let car = {
+        //     name: 'audi',
+        //     color: 'black',
+        //     number: 2091
+        // }
+        // result.innerHTML = 'i have a ' + car.color + ' ' + car.name
+        // function ButtonClicked() {
+        //     let val = 200
+
+        //     if (val == 100) {
+        //         result.style.backgroundColor = 'blue'
+        //     } else if (val == 200) {
+        //         result.style.backgroundColor = 'green'
+
+        //     } else {
+        //         result.style.backgroundColor = 'red'
+        //     }
+
+        // }
+
+
+        let numbers = [354, 34532, 5, 2, 53, 2, 4253, 432, 453, 2453, 245, 3]
+
+
+        // for (let i = 0; i < 10; i++) {
+        //     result.innerHTML += '<p>' + numbers[i] + '</p>'
+        // }
+        for (let i of numbers) {
+            result.innerHTML += '<p>' + i + '</p>'
+        }
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+
+</html>

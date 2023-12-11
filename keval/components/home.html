@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .home {
+            /* height: 100vh; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(184, 210, 232);
+        }
+
+        .home img {
+            width: 100%;
+        }
+
+        .home .col1,
+        .home .col2 {
+            width: 50%;
+            position: relative;
+            padding: 50px;
+        }
+
+        .home .col2 .add {
+            background-color: red;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            bottom: 50%;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        .home .price {
+
+            font-size: 25px;
+        }
+
+        .home del {
+            color: red;
+            margin: 15px;
+        }
+
+        .home h1 {
+            font-size: 70px;
+            font-weight: 400;
+            margin: 15px 0;
+        }
+
+        .home p {
+            margin: 15px 0 50px;
+        }
+
+        .home a {
+            color: black;
+            font-weight: 700;
+        }
+
+        .category {
+            display: flex;
+            padding: 0 50px;
+        }
+
+        .category .card {
+            display: flex;
+            width: 20%;
+            align-items: center;
+        }
+
+        .category .card>div {
+            width: 50%;
+            padding: 0 20px;
+        }
+
+        .category img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <div class="col1">
+            <div class="price">
+                <span>$999</span>
+                <del>$1999</del>
+            </div>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            <div class="add"><a href="">SHOP NOW</a></div>
+        </div>
+        <div class="col2">
+            <div class="add">
+                <div>
+                    <h3>UP TO </h3>
+                    <h1>50%</h1>
+                    <h4>ON SELECTED ITEMS</h4>
+                </div>
+
+            </div>
+            <img src="https://nooni-be87.kxcdn.com/nooni/wp-content/uploads/2023/04/slide-1-home3.png" alt="">
+        </div>
+    </div>
+    <div class="category">
+        <div class="card">
+            <div class="img">
+                <img src="https://nooni-be87.kxcdn.com/nooni/wp-content/uploads/2023/04/icon-3-2x.png" alt="">
+            </div>
+            <div class="content">
+                <h3>CHAIR</h3>
+                <p>7 products</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://nooni-be87.kxcdn.com/nooni/wp-content/uploads/2023/04/icon-3-2x.png" alt="">
+            </div>
+            <div class="content">
+                <h3>CHAIR</h3>
+                <p>7 products</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://nooni-be87.kxcdn.com/nooni/wp-content/uploads/2023/04/icon-3-2x.png" alt="">
+            </div>
+            <div class="content">
+                <h3>CHAIR</h3>
+                <p>7 products</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://nooni-be87.kxcdn.com/nooni/wp-content/uploads/2023/04/icon-3-2x.png" alt="">
+            </div>
+            <div class="content">
+                <h3>CHAIR</h3>
+                <p>7 products</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://nooni-be87.kxcdn.com/nooni/wp-content/uploads/2023/04/icon-3-2x.png" alt="">
+            </div>
+            <div class="content">
+                <h3>CHAIR</h3>
+                <p>7 products</p>
+            </div>
+        </div>
+    </div>
+    <style>
+        .nooniCard {
+            background-image: url('https://demo.theme-sky.com/nooni/wp-content/uploads/2023/04/background-section-1.jpg');
+            padding: 50px;
+        }
+
+        .nooniCard .cardcontent {
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .boxes {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+
+            background-color: rgb(56, 56, 56);
+            border-radius: 50%;
+            padding: 40px;
+        }
+    </style>
+
+    <div class="boxes">
+        <div class="box">
+            <h3>Hello</h3>
+            <p>lorem</p>
+        </div>
+        <div class="box">
+            <h3>Hello</h3>
+            <p>lorem</p>
+        </div>
+        <div class="box">
+            <h3>Hello</h3>
+            <p>lorem</p>
+        </div>
+        <div class="box">
+            <h3>Hello</h3>
+            <p>lorem</p>
+        </div>
+    </div>
+    <div class="nooniCard">
+        <div class="cardcontent">
+            <h1>Get A $20 Nooni card</h1>
+            <h3>When Buy $100 E-Gift CArds</h3>
+            <a href="">SHOP NOW</a>
+        </div>
+    </div>
+
+    <style>
+        .new {
+            display: grid;
+            gap: 50px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .new .col1 {
+            background-color: red;
+        }
+
+        .new .col2 {
+            padding: 0 50px;
+        }
+
+        .pizza {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 15% 85%;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .pizza img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .pizza .cont div {
+            display: grid;
+            grid-template-columns: max-content auto auto;
+        }
+
+        .pizza .cont div.line {
+            border-bottom: 1px dotted black;
+        }
+    </style>
+    <div class="new">
+        <div class="col1">
+            helllo
+        </div>
+        <div class="col2">
+            <h1>Pizza</h1>
+            <hr>
+            <div class="pizza">
+                <div class="img">
+                    <img src="https://th.bing.com/th/id/OIP.MusZNHZ77QZR9NsI7UZj1AHaF8?pid=ImgDet&rs=1" alt="">
+                </div>
+                <div class="cont">
+                    <div>
+                        <h3>Oakey Smokey Pizza</h3>
+                        <div class="line"></div>
+                        <h3>$23.00</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="pizza">
+                <div class="img">
+                    <img src="https://th.bing.com/th/id/OIP.MusZNHZ77QZR9NsI7UZj1AHaF8?pid=ImgDet&rs=1" alt="">
+                </div>
+                <div class="cont">
+                    <div>
+                        <h3>Oakey Smokey Pizza</h3>
+                        <div class="line"></div>
+                        <h3>$23.00</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="pizza">
+                <div class="img">
+                    <img src="https://th.bing.com/th/id/OIP.MusZNHZ77QZR9NsI7UZj1AHaF8?pid=ImgDet&rs=1" alt="">
+                </div>
+                <div class="cont">
+                    <div>
+                        <h3>Oakey Smokey Pizza</h3>
+                        <div class="line"></div>
+                        <h3>$23.00</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="pizza">
+                <div class="img">
+                    <img src="https://th.bing.com/th/id/OIP.MusZNHZ77QZR9NsI7UZj1AHaF8?pid=ImgDet&rs=1" alt="">
+                </div>
+                <div class="cont">
+                    <div>
+                        <h3>Oakey Smokey Pizza</h3>
+                        <div class="line"></div>
+                        <h3>$23.00</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="pizza">
+                <div class="img">
+                    <img src="https://th.bing.com/th/id/OIP.MusZNHZ77QZR9NsI7UZj1AHaF8?pid=ImgDet&rs=1" alt="">
+                </div>
+                <div class="cont">
+                    <div>
+                        <h3>Oakey Smokey Pizza</h3>
+                        <div class="line"></div>
+                        <h3>$23.00</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="pizza">
+                <div class="img">
+                    <img src="https://th.bing.com/th/id/OIP.MusZNHZ77QZR9NsI7UZj1AHaF8?pid=ImgDet&rs=1" alt="">
+                </div>
+                <div class="cont">
+                    <div>
+                        <h3>Oakey Smokey Pizza</h3>
+                        <div class="line"></div>
+                        <h3>$23.00</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

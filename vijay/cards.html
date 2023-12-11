@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .card {
+            overflow: hidden;
+            position: relative;
+            width: 400px;
+            border: 1px solid rgb(6, 31, 57);
+        }
+
+        .card .img {
+            overflow: hidden;
+
+        }
+
+        .card img {
+            width: 100%;
+            transition: .5s;
+
+        }
+
+        .card:hover img {
+            scale: 1.2;
+        }
+
+        .overlay {
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 0%;
+            overflow: hidden;
+            width: 100%;
+            transition: .3s;
+            top: 50%;
+            right: 0;
+            background-color: red;
+        }
+
+        .card:hover .overlay {
+            top: 0;
+            height: 100%;
+        }
+
+        .card button {
+            padding: 10px 40px;
+            transition: .5s;
+            border: none;
+            background-color: white;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .card button:active {
+            scale: 1.2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="overlay">
+            <button>Click me</button>
+        </div>
+        <div class="img">
+            <img src="d.jpg" alt="">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quas obcaecati itaque omnis, exercitationem
+            quasi alias aspernatur, laborum deserunt possimus esse iste atque beatae error nihil assumenda ipsa aliquid
+            totam.</p>
+
+    </div>
+
+</body>
+
+</html>

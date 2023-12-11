@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+
+        }
+
+        #wrapper img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id="wrapper">
+
+    </div>
+
+
+
+    <script>
+        let students = [
+
+            {
+                img: 'https://th.bing.com/th/id/OIP.bsF81HXjZtqdgiGNJ3KjjwHaEo?w=311&h=194&c=7&r=0&o=5&pid=1.7'
+                ,
+                name: 'jatin',
+                skill: 'mern stack developer'
+            },
+            {
+                img: 'https://th.bing.com/th/id/OIP.bsF81HXjZtqdgiGNJ3KjjwHaEo?w=311&h=194&c=7&r=0&o=5&pid=1.7'
+                ,
+                name: 'mAAHI',
+                skill: 'mern stack developer'
+            },
+            {
+                img: 'https://th.bing.com/th/id/OIP.bsF81HXjZtqdgiGNJ3KjjwHaEo?w=311&h=194&c=7&r=0&o=5&pid=1.7'
+                ,
+                name: 'keval',
+                skill: 'mern stack developer'
+            },
+            {
+                img: 'https://th.bing.com/th/id/OIP.bsF81HXjZtqdgiGNJ3KjjwHaEo?w=311&h=194&c=7&r=0&o=5&pid=1.7'
+                ,
+                name: 'Deven',
+                skill: 'mern stack developer'
+            },
+            {
+                img: 'https://th.bing.com/th/id/OIP.bsF81HXjZtqdgiGNJ3KjjwHaEo?w=311&h=194&c=7&r=0&o=5&pid=1.7'
+                ,
+                name: 'magan',
+                skill: 'mern stack developer'
+            },
+        ]
+
+        let wrapper = document.getElementById('wrapper')
+
+
+        students.forEach((x) => {
+            wrapper.innerHTML += ` <div class="student">
+            <img src="${x.img}" alt="">
+            <h2>${x.name}</h2>
+            <p>${x.skill}</p>
+            <button>Hire</button>
+        </div>`
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            height: 70px;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+        }
+        .navbar ul{
+            display: flex;
+            gap: 20px;
+            list-style:none;
+            font-size: 18px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <h1 id="heading">Kharidlo</h1>
+        </div>
+        <ul>
+            <li onclick="Change()">Home</li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <script>
+        function Change(){
+document.getElementById('heading').style.color='red'
+        }
+    </script>
+
+</body>
+
+</html>

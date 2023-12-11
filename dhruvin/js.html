@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="Input" placeholder="Enter Value...">
+    <button onclick="SubmitVal()">Submit</button>
+    <h1 id="result">Err Result</h1>
+
+
+    <script>
+
+        let input = document.getElementById('Input')
+        let result = document.getElementById('result')
+
+        function SubmitVal() {
+            result.innerHTML = 'input is ok'
+            // console.log(value)
+            try {
+                if (input.value.trim() == '') throw 'input value is blank';
+
+                if (input.value.length > 10) throw 'maximum value length is 10'
+            } catch (err) {
+                result.innerHTML = err
+            }
+        }
+    </script>
+</body>
+
+</html>

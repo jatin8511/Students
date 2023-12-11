@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <div class="header">
+        <h1 class="logo">
+            MyStore
+        </h1>
+        <div class="links">
+            <div class="link">Home</div>
+            <div class="link">About</div>
+            <div class="link">Contact</div>
+        </div>
+
+        <div class="icons">
+            <i onclick="ShowCart()" class="fa-solid fa-bag-shopping"></i><span id="cartLength">0</span>
+        </div>
+    </div>
+
+
+    <div class="wrapper" id="wrapper">
+
+    </div>
+
+
+    <div class="cart" id="cart">
+        <div class="cartHeader">
+            <h3>Cart</h3>
+            <i onclick="HideCart()" class="fa-solid fa-x"></i>
+        </div>
+        <div class="cartWrapper" id="cartWrapper">
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head {
+            background-color: blue;
+            width: fit-content;
+            padding: 20px;
+            transition: .5s;
+            position: relative;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello Javascript</h1>
+    <h3 id="heading">Hello Jatin</h3>
+    <button onclick="Change()">Change</button>
+
+    <div>
+        <img id="img" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+        <br>
+        <button onclick="BulbOn()">On</button>
+        <button onclick="BulbOff()">Off</button>
+    </div>
+    <hr>
+
+    <h1 id="head" class="head">Keval</h1>
+    <button onclick="Slide()">Slide</button>
+
+    <script>
+        function Change() {
+            document.getElementById('heading').innerHTML = 'keval Shah'
+            document.getElementById('heading').style.color = 'red'
+            document.getElementById('heading').style.fontSize = '50px'
+        }
+        function BulbOn() {
+            document.getElementById('img').src = 'https://www.w3schools.com/js/pic_bulbon.gif'
+        }
+        function BulbOff() {
+            document.getElementById('img').src = 'https://www.w3schools.com/js/pic_bulboff.gif'
+        }
+        function Slide() {
+            document.getElementById('head').style.left = '400px'
+        }
+        let name = 'keval'
+
+        let str = ` <div class="product">
+        <div class="img">
+            <img src="${product.image}" alt="">
+        </div>
+        <h2>${product.title}</h2>
+    </div>
+`
+
+
+    </script>
+</body>
+
+</html>

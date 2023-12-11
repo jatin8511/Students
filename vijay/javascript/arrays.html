@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Javascript array</h1>
+
+    <div id="res">result</div>
+
+
+    <script>
+        let res = document.getElementById('res')
+        let students = [
+            'jatin', 'vijay', 'magan', 'simon', 'kuldip', 'ali', 'chhagan'
+        ]
+        // let students = [
+        //     'jatin', 'vijay', ['magan', 'simon'], 'kuldip', 'ali', 'chhagan'
+        // ] flat array
+
+        // students.pop()
+        // students.push('deven')
+
+
+        // students.shift()
+        // students.unshift('deven')
+
+        // delete students[2]
+
+        // console.log(students.flat())
+
+
+
+        // let part = students.slice(1, 4)
+
+        // students.splice(2, 1)
+
+
+        // res.innerHTML = part
+
+
+        let studentsDetails = [
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer'
+            },
+            {
+                name: 'vijay',
+                age: 22,
+                skill: 'web developer'
+            },
+            {
+                name: 'kuldip',
+                age: 20,
+                skill: 'react developer'
+            },
+        ]
+
+
+
+
+
+        res.innerHTML = studentsDetails.map((x) => {
+            return '<li> name : ' + x.name + '<br> skill : ' + x.skill + '</li>'
+        }).join('')
+
+
+    </script>
+
+</body>
+
+</html>

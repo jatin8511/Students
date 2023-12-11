@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --red: rgb(57, 162, 148);
+            --base: 12px;
+        }
+
+        p {
+            --red:rgb(128, 0, 0);
+            color: var(--red);
+        }
+
+        h3 {
+            background-color: var(--red);
+            font-size: var(--base);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container .box img {
+            --height:300px;
+            width: 100%;
+            height:var(--height);
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 50px;
+        }
+
+        .box {
+            width: 25%;
+            box-shadow: 0 3px 10px gainsboro;
+        }
+
+        .mainHeading {
+            text-align: center;
+        }
+
+        .main {
+            height: 50vh;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: aliceblue;
+        }
+
+        .box2 {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+
+        .navbar {
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            height: 70px;
+            justify-content: space-between;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .web {
+            display: flex;
+            gap: 30px;
+            margin: 50px 100px;
+            background-color: aliceblue;
+        }
+
+        .web .col1 {
+            width: 60%;
+        }
+
+        .web .col2 {
+            width: 40%;
+        }
+
+        .web .col1 .col1-com {
+            height: 30vh;
+            background-color: antiquewhite;
+            margin-bottom: 30px;
+        }
+
+        .web .col2 .col2-com {
+            height: 30vh;
+            background-color: azure;
+            margin-bottom: 30px;
+        }
+
+        .nav {
+            background-color: red;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav ul {
+            display: flex;
+        }
+
+        .nav ul li {
+            list-style-type: none;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+    </table>
+    <div class="nav">
+        <ul class="first">
+            <li>item1</li>
+            <li>item1</li>
+            <li>item1</li>
+        </ul>
+        <ul class="second">
+            <li>item1</li>
+            <li>item1</li>
+            <li>item1</li>
+            <li>item1</li>
+            <li>item1</li>
+        </ul>
+    </div>
+
+    <div class="navbar">
+        <h1>Amazon</h1>
+        <ul>
+            <li>Home</li>
+            <li><a href="#web">Web</a></li>
+            <li>Service</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <h1 class="mainHeading">Products</h1>
+    <div class="container">
+        <div class="box">
+            <img src="images/dora.jpeg" alt="">
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quam.</p>
+        </div>
+        <div class="box">
+            <img src="images/dora.jpeg" alt="">
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quam.</p>
+        </div>
+        <div class="box">
+            <img src="images/dora.jpeg" alt="">
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quam.</p>
+        </div>
+        <div class="box">
+            <img src="images/dora.jpeg" alt="">
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quam.</p>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div class="box2">
+
+        </div>
+        <div class="box2">
+
+        </div>
+    </div>
+
+
+
+    <div class="web" id="web">
+        <div class="col1">
+            <div class="col1-1 col1-com">col1-1</div>
+            <div class="col1-2 col1-com">col1-2</div>
+        </div>
+        <div class="col2">
+            <div class="col2-1 col2-com">col2-1</div>
+            <div class="col2-2 col2-com">col2-2</div>
+            <div class="col2-3 col2-com">col2-3</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            width: 300px;
+            background-color: red;
+            border: 3px solid gray;
+            position: relative;
+            left: 0;
+            transition: .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">Hello world</h1>
+    <button onclick="Change()">Click me</button>
+    <button onclick="Reset()">reset</button>
+    <div>
+        <img id="img" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+        <br>
+        <button onclick="OnBulb()">On</button>
+        <button onclick="OffBulb()">Off</button>
+    </div>
+    <script>
+        let heading = document.getElementById('heading')
+
+        function Change() {
+            heading.innerHTML = 'Avakash'
+            heading.style.left = '400px'
+        }
+        function Reset() {
+            heading.innerHTML = 'Hello world'
+            heading.style.left = '0'
+        }
+        function OnBulb() {
+            document.getElementById('img').src = 'https://www.w3schools.com/js/pic_bulbon.gif'
+        }
+        function OffBulb() {
+            document.getElementById('img').src = 'https://www.w3schools.com/js/pic_bulboff.gif'
+        }
+    </script>
+</body>
+
+</html>

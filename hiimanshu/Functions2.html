@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="input" type="text" placeholder="Enter String To Check Length...">
+    <button onclick="CheckValue()">Check Value</button>
+    <button onclick="CheckLength()">Check Length</button>
+    <button onclick="CheckFirst()">Check First Letter</button>
+    <button onclick="Clear()">Clear</button>
+    <h1>Value : <span id="value"></span></h1>
+    <h1>Length : <span id="length"></span></h1>
+    <h1>First Letter : <span id="fl"></span></h1>
+
+
+
+    <script>
+        let value = document.getElementById('value')
+        let length = document.getElementById('length')
+        let fl = document.getElementById('fl')
+        let input = document.getElementById('input')
+        let val = 'hiii'
+        length.innerHTML = `<p>${val} </p>`
+
+        const CheckLength = () => {
+            length.innerHTML = input.value.length
+        }
+        const CheckValue = () => {
+            value.innerHTML = input.value
+        }
+        function CheckFirst() {
+            fl.innerHTML = input.value.substring(0, 1)
+        }
+
+        function Clear() {
+            value.innerHTML = ''
+            fl.innerHTML = ''
+            input.value = ''
+            length.innerHTML = ''
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anim {
+
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            animation-name: mydiv;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            /* animation-delay: -2s; */
+            /* animation-fill-mode: forwards; */
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes mydiv {
+            0% {
+                translate: 0 0;
+            }
+
+            25% {
+                translate: 300px 0;
+
+            }
+
+            50% {
+                translate: 300px 300px;
+
+            }
+
+            75% {
+                translate: 0 300px;
+
+            }
+
+            100% {
+                translate: 0 50px;
+                rotate: 360deg;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <div class="anim">
+        animation
+    </div>
+
+</body>
+
+</html>

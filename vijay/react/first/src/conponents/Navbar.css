@@ -1,0 +1,16 @@
+.navbar {
+    background-color: black;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    color: rgb(250, 250, 250);
+}
+
+.navbar .active {
+    color: red;
+}

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .wrapper img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .wrapper .product {
+            padding: 15px;
+            border-radius: 7px;
+            box-shadow: 0 3px 10px rgb(215, 215, 215);
+        }
+
+        .wrapper .product button {
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 100px;
+            align-items: center;
+            height: 70px;
+            background-color: black;
+            color: white;
+        }
+
+        .navbar ul {
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+        }
+
+        .cartWrapper {
+            overflow: auto;
+            height: 95vh;
+        }
+
+        .cart {
+            height: 100vh;
+            width: 70%;
+            position: fixed;
+            z-index: 100;
+            left: -110%;
+            top: 0;
+            transition: .3s;
+            background-color: antiquewhite;
+        }
+
+        .cartHead {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: center;
+            box-shadow: 0 3px 3px gray;
+        }
+
+        .cartWrapper .product {
+            display: grid;
+            grid-template-columns: 150px 40% auto auto;
+            box-shadow: 0 3px 10px rgb(223, 223, 223);
+            margin: 20px 0;
+            background-color: white;
+
+        }
+
+        .img {
+            height: 90vh;
+            width: 100%;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cart img {
+            width: 100%;
+        }
+
+        .swiper-pagination-bullet {
+            border-radius: 0 !important;
+            background-color: white;
+            /* opacity: 1; */
+            height: 20px;
+            width: 20px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Javascript loops</h1>
+        <ul>
+            <li>Home</li>
+            <li>about</li>
+
+        </ul>
+        <div class="search">
+            <input id="searchInput" type="search">
+            <button onclick="Search()">Search</button>
+        </div>
+        <div class="cartBtn">
+            <button onclick="openCart()">cart <span id="CartTotal">0</span></button>
+        </div>
+    </div>
+    <div class="MainSwiper">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img">
+                        <img src="https://hsmt-web.com/wp/wp-content/themes/hsmt-web/images/main-js-swiper.jpg?202007122154"
+                            alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img">
+                        <img src="https://hsmt-web.com/wp/wp-content/themes/hsmt-web/images/main-js-swiper.jpg?202007122154"
+                            alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img">
+                        <img src="https://hsmt-web.com/wp/wp-content/themes/hsmt-web/images/main-js-swiper.jpg?202007122154"
+                            alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img">
+                        <img src="https://hsmt-web.com/wp/wp-content/themes/hsmt-web/images/main-js-swiper.jpg?202007122154"
+                            alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="cart" id="cart">
+        <div class="cartHead">
+            <h3>Cart</h3>
+            <div class="closeCart">
+                <button onclick="closeCart()">Close</button>
+            </div>
+        </div>
+        <div class="cartWrapper" id="cartWrapper">
+
+        </div>
+    </div>
+
+    <div class="wrapper" id="res">
+
+    </div>
+
+
+
+
+
+    <script>
+        let searchInput = document.getElementById('searchInput')
+        let cartArray = []
+        const earbud = [
+            {
+                id: 1,
+                title: 'boAt Airdopes 141 Bluetooth Truly Wireless in Ear Earbuds with 42H Playtime, Beast Mode(Low Latency Upto 80ms) for Gaming, IPX4 Water Resistance, ENx Tech, IWP, Smooth Touch Controls(Cyan Cider)',
+                img: 'https://m.media-amazon.com/images/I/31BMd11KciL._SY300_SX300_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/51IIMMnQ7cL._SY450_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/81NXl8ObnEL._SY450_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/71Dbhs4BLZL._SY450_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/71DxKhGrLuL._SY450_.jpg',
+                price: 4490,
+                discount: 78,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 2,
+                title: 'CrossBeats Newly launched Revolt Hybrid Active Noise Cancelling Wireless Bluetooth Earbuds, 48hrs Playtime TWS, 10 mm Ti-Alloy Driver, EchoBlast™, 40ms Low Latency Earphone-Black',
+                img: 'https://m.media-amazon.com/images/I/61J9BzebDnL._SY450_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/61f1IQifWXL._SY450_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/61axYGTUdVL._SY450_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/81o04TvhnIL._SY450_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/61t9SMyZ9aL._SY450_.jpg',
+                price: 9999,
+                discount: 75,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 3,
+                title: 'OnePlus Nord Buds True Wireless in Ear Earbuds with Mic, 12.4mm Titanium Drivers, Playback:Up to 30hr case, 4-Mic Design + AI Noise Cancellation, IP55 Rating, Fast Charging (Black Slate)',
+                img: 'https://m.media-amazon.com/images/I/51ws0E8cnbL._SL1500_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/51ws0E8cnbL._SL1500_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/51gX3E0vzjL._SL1500_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/41-vUVwh5VL._SL1500_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/51PDeyFzo1L._SL1500_.jpg',
+                price: 2999,
+                discount: 7,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 4,
+                title: 'pTron Bassbuds Duo in Ear Earbuds with 32Hrs Total Playtime, Bluetooth 5.1 Wireless, Stereo Audio, Touch Control TWS, with Mic, Type-C Fast Charging, IPX4 & Voice Assistance (Black)',
+                img: 'https://m.media-amazon.com/images/I/31G1NouVxaL._SY300_SX300_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/61Coiv6SLXL._SY450_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/61jkqxMB4jL._SY450_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/51+tZ3xiA7L._SL1100_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/51wi0sZVqyL._SL1100_.jpg',
+                price: 2599,
+                discount: 71,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 5,
+                title: 'Boult Audio Z25 True Wireless in Ear Earbuds with 32H Playtime, 45ms Low Latency, Type-C Fast Charging (10=150Mins), Made in India, Zen ENC Mic, 13mm Bass Drivers, Bluetooth 5.3 Ear Buds (Blue Moss)',
+                img: 'https://m.media-amazon.com/images/I/71vlByXS-JL._SL1500_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/81KqErUpBOL._SL1500_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/81v+dv-6KAL._SL1500_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/71akRKumeCL._SL1500_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/81T79XX+wUL._SL1500_.jpg',
+                price: 2999,
+                discount: 63,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 6,
+                title: 'Boult Audio X30 True Wireless in Ear Earbuds with 40H Playtime, Quad Mic ENC, 45ms Xtreme Low Latency, Made in India, Type-C Fast Charging, 3 Equalizer Modes (Rock, BoomX, Hi-Fi), BT 5.1 (Blue)',
+                img: 'https://m.media-amazon.com/images/I/71ey9w1JYTL._SL1500_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/71xO47tyYsL._SL1500_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/71m50Eny0EL._SL1500_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/61RgoMA9XDL._SL1500_.jpg',
+                img5: '	https://m.media-amazon.com/images/I/81OBQ+eI1uL._SL1500_.jpg',
+                price: 4999,
+                discount: 70,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 7,
+                title: 'boAt Airdopes 121v2 in-Ear True Wireless Earbuds with Upto 14 Hours Playback, 8MM Drivers, Battery Indicators, Lightweight Earbuds & Multifunction Controls (Active Black, with Mic)',
+                img: 'https://m.media-amazon.com/images/I/61o2urRxrcL._SL1500_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/61o2urRxrcL._SL1500_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/61j3VLyxkHL._SL1500_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/61aBVyNtImL._SL1500_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/71JFUxjducL._SL1500_.jpg',
+                price: 2990,
+                discount: 57,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 8,
+                title: 'Blaupunkt BTW07 ANC Moksha-30Db Bluetooth Truly Wireless In Ear Earbuds with Mic, Flip Top Rotatory Design, 40H Playtime, TurboVolt Fast Charging, Crispr Enc Tech, GameOn with 80Ms Low Latency (Black)',
+                img: 'https://m.media-amazon.com/images/I/31XeLoY52sL._SY300_SX300_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/61iJdWkaQ+L._SY450_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/71Tg5d5phGL._SY450_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/61KdB+bNUFL._SY450_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/61lxhBySpLL._SY450_.jpg',
+                price: 5999,
+                discount: 58,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 10,
+                title: `pTron Bassbuds Fute 5.1 Bluetooth Truly Wireless Featherlite TWS in Ear Earbuds with Mic 25Hrs Playtime, 13Mm Dynamic Driver, Immersive Audio, Touch Control, Voice Assistance & Fast Charging (Black)`,
+                img: 'https://m.media-amazon.com/images/I/51PNGyUNvmL._SL1100_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/61dElFbRplL._SL1100_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/51Im+twUG4L._SL1100_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/61un6wGaIjL._SL1100_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/513-c5luOmL._SL1100_.jpg',
+                price: 3299,
+                discount: 79,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 11,
+                title: `Boult Audio X1 Buds True Wireless in Ear Earbuds with 24H Playtime, Quad Mic ENC, Made in India, Type-C Fast Charging, Environmental Noise Cancellation, 10mm Bass Drivers, TWS Airbass ear buds (Black)`,
+                img: 'https://m.media-amazon.com/images/I/71mT2gCHH+L._SL1500_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/81Nov7kscML._SL1500_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/91teZ0CgAKL._SL1500_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/71aL6iUS8KL._SL1500_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/71o4W7JuPtL._SL1500_.jpg',
+                price: 6999,
+                discount: 74,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 12,
+                title: `Boult Audio Powerbuds True Wireless in Ear Earbuds with 120H Playtime, in-Built Powerbank, Type-C Fast Charging, Made in India, Pro+ Calling HD Mic, IPX7 Waterproof, Bluetooth Ear Buds TWS (Black)`,
+                img: 'https://m.media-amazon.com/images/I/71jrExswt4L._SL1500_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/71HAe9bru5L._SL1500_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/71wUXtQVVjL._SL1500_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/81r6fKyraKL._SL1500_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/71-cfdI-CBL._SL1500_.jpg',
+                price: 8999,
+                discount: 83,
+                qty: 1,
+                category: 'earbud',
+            },
+            {
+                id: 13,
+                title: `Noise Buds Vs104 Bluetooth Truly Wireless in Ear Earbuds with Mic, 30-Hours of Playtime, Instacharge, 13Mm Driver and Hyper Sync (Charcoal Black)`,
+                img: 'https://m.media-amazon.com/images/I/51cjIEYU8BL._SL1500_.jpg',
+                img2: 'https://m.media-amazon.com/images/I/61gE89QmD+L._SL1500_.jpg',
+                img3: 'https://m.media-amazon.com/images/I/51r57IhfBwL._SL1500_.jpg',
+                img4: 'https://m.media-amazon.com/images/I/513az8Cho7L._SL1500_.jpg',
+                img5: 'https://m.media-amazon.com/images/I/517pNu7bWJL._SL1500_.jpg',
+                price: 3499,
+                discount: 69,
+                qty: 1,
+                category: 'earbud',
+            }
+        ]
+        let cart = document.getElementById('cart')
+        let cartWrapper = document.getElementById('cartWrapper')
+        let wrapper = document.getElementById('res')
+        let CartTotal = document.getElementById('CartTotal')
+        let students = [
+            'jatin', 'vijay', 'magan', 'simon', 'kuldip', 'ali', 'chhagan'
+        ]
+
+        let studentsDetails = [
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer'
+            },
+            {
+                name: 'vijay',
+                age: 22,
+                skill: 'web developer'
+            },
+            {
+                name: 'kuldip',
+                age: 20,
+                skill: 'react developer'
+            },
+        ]
+
+
+        let numbers = [4, 54, 3, 4, 6453, 563442, 5434, 43, 545324, 53, 346543, 536, 5436, 354767, 53453, 643]
+
+
+
+        // for (let x = 0; x < students.length; x++) {
+        //     res.innerHTML += `<h3>${students[x]}</h3>`
+        // }
+
+        //         for (let x in students) {
+        // console.log(students[x])
+        //         }
+
+
+        // for (let x of students) {
+        //     console.log(x)
+        // }
+
+        // res.innerHTML = students.map((x) => {
+        //     return `<h3>${x}</h3>`
+        // }).join('')
+
+
+        // let findNum = numbers.find((x) => x > 100)
+        // let filterNum = numbers.filter((x) => x > 100)
+        // console.log(filterNum)
+        // rendering products
+        wrapper.innerHTML = earbud.map((x) => {
+            return ` <div data-aos='fade-up' class="product">
+            <div class="img">
+                <img src="${x.img}" alt="">
+            </div>
+            <h2>${x.title}</h2>
+            <h3>${x.price}
+            </h3>
+            <div class="add"><button onclick="AddToCart(${x.id})">Add To Cart</button></div>
+        </div>`
+        }).join('')
+
+
+
+
+        const openCart = () => {
+            cart.style.left = '0'
+        }
+        const closeCart = () => {
+            cart.style.left = '-110%'
+
+        }
+
+
+        const AddToCart = (id) => {
+            let obj = earbud.find((x) => x.id == id)
+            let existing = cartArray.find((x) => x.id == id)
+
+            console.log(existing)
+            if (existing) {
+                alert('product is already exists in cart!')
+            } else {
+
+                cartArray.push(obj)
+            }
+
+            cartWrapper.innerHTML = cartArray.map((x) => {
+                return ` <div class="product">
+            <div class="img">
+                <img src="${x.img}" alt="">
+            </div>
+            <h2>${x.title}</h2>
+            <h3>${x.price}
+            </h3>
+            <div class="add"><button onclick="Remove(${x.id})">Remove</button></div>
+        </div>`
+            }).join('')
+
+            CartTotal.innerHTML = cartArray.length
+
+        }
+
+        const Remove = (id) => {
+            let newCart = cartArray.filter((x) => x.id != id)
+
+            cartArray = newCart
+
+            cartWrapper.innerHTML = cartArray.map((x) => {
+                return ` <div class="product">
+            <div class="img">
+                <img src="${x.img}" alt="">
+            </div>
+            <h2>${x.title}</h2>
+            <h3>${x.price}
+            </h3>
+            <div class="add"><button onclick="Remove(${x.id})">Remove</button></div>
+        </div>`
+            }).join('')
+            CartTotal.innerHTML = cartArray.length
+
+        }
+
+
+
+
+        // conditions in javascript
+
+        // let val = 100
+
+        // if (val == 10) {
+        //     alert('value is 10')
+        // } else if (val == 100) {
+        //     alert('value is 100')
+        // }
+        // else {
+        //     alert('value is not 10')
+
+        // }
+
+        const Search = () => {
+            let searched = earbud.filter((x) => x.title.toLowerCase().includes(searchInput.value.toLowerCase()))
+            console.log(searched)
+            wrapper.innerHTML = searched.map((x) => {
+                return ` <div class="product">
+            <div class="img">
+                <img src="${x.img}" alt="">
+            </div>
+            <h2>${x.title}</h2>
+            <h3>${x.price}
+            </h3>
+            <div class="add"><button onclick="AddToCart(${x.id})">Add To Cart</button></div>
+        </div>`
+            }).join('')
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

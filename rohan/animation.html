@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            animation-name: rohan;
+            animation-duration: 3s;
+            position: relative;
+            /* animation-delay: 2s; */
+            /* animation-direction: alternate; */
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes rohan {
+
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                left: 100px;
+                top: 0;
+            }
+
+            50% {
+                left: 100px;
+                top: 100px;
+            }
+
+            75% {
+                left: 0;
+                top: 100px;
+            }
+
+            100% {
+                left: 0;
+                top: 0;
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">box</div>
+</body>
+
+</html>
+
+<!-- @keyframes
+animation-name
+animation-duration
+animation-delay
+animation-iteration-count
+animation-direction
+animation-timing-function
+animation-fill-mode
+animation -->

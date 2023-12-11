@@ -1,0 +1,19 @@
+.active {
+  color: red;
+  font-size: 18px;
+}
+
+.tshirtsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.tshirtsWrapper img {
+  width: 100%;
+}
+
+.tshirtsWrapper>.product {
+  padding: 15px;
+  box-shadow: 0 3px 10px gray;
+}

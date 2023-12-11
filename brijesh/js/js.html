@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .home{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello world!</h1>
+
+    <div class="home">
+        <div id="wrapper">
+
+        </div>
+
+        <div id="hiredElem" class="hired">
+
+        </div>
+    </div>
+
+
+    <script>
+        // operators 
+
+        // + , - , / , * , ** , %
+
+
+        // = , += , -= ,/= , *=
+
+        // let check = 5087
+        // let msg = 'not checking !'
+
+        // switch (check) {
+        //     case 100: msg = 'value is 100'
+        //         break
+        //     case 50: msg = 'value is 50'
+        //         break
+        //     case 38: msg = 'value is 38'
+        //         break
+        //     case 95: msg = 'value is 95'
+        //         break
+        //     case 1000: msg = 'value is 1000'
+        //         break
+        //     default: msg = 'value not matching'
+
+        // }
+
+
+        // console.log(msg)
+
+
+        let students = [
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack web developer'
+            },
+            {
+                name: 'brijesh',
+                age: 20,
+                skill: 'front end web developer'
+            },
+            {
+                name: 'maahi',
+                age: 20,
+                skill: 'react developer'
+            },
+        ]
+
+        let Hired = []
+
+
+        students.map((x) => {
+            document.getElementById('wrapper').innerHTML += ` <div class="card">
+            <h3>${x.name}</h3>
+            <p> age : ${x.age} </p>
+            <h4>${x.skill}</h4>
+            <button onclick='Hire("${x.name}")'>Hire</button>
+        </div>`
+        })
+
+
+
+        function Hire(name) {
+            let obj = students.find((x) => {
+                return x.name == name
+            })
+
+            Hired.push(obj)
+
+            hiredElem.innerHTML = Hired.map((x) => {
+                return `<div><p>${x.name}</p> <button>reject</button></div>`
+            })
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

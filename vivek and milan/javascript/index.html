@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .dropdown {
+            width: 200px;
+        }
+
+        .dropdown>p {
+            background-color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .dropdown .drop {
+            display: none;
+        }
+
+        .dropdown .drop p {
+            padding: 10px;
+        }
+
+        .dropdown .drop p:hover {
+            background-color: rgb(195, 195, 195);
+        }
+
+        .magan {
+            display: block !important;
+        }
+
+        #heading {
+            position: relative !important;
+            transition: left 2s !important;
+
+        }
+
+        .gamanleft {
+            left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">Hello World!</h1>
+    <!-- <h3 class="res" id="result">result</h3>
+    <button onclick="checkVal('jatin')">Click</button>
+    <button onclick="checkVal('milan')">Magan</button>
+    <br>
+    <hr><button onclick="CHangeCss()">Change Css</button> -->
+
+
+    <div class="dropdown">
+        <p onclick="DropDown()">Click Me</p>
+        <div class="drop" id="drop">
+            <p>Hello World!</p>
+            <p>Hello World!</p>
+            <p>Hello World!</p>
+            <p>Hello World!</p>
+            <p>Hello World!</p>
+            <p>Hello World!</p>
+        </div>
+    </div>
+
+
+    <script>
+        // let a = 100
+        // name = 'magan'
+        // skill = 'react developer'
+        // age = 22
+        // // +  - * /
+
+
+
+
+
+
+
+
+
+        // console.log(a)
+
+
+        // function KaiBI(name,skill,age) {
+        // document.getElementById('result').innerHTML = 'hello my name is ' + name + ' i am a ' + skill + ' and i am ' + age + " years old"
+
+        //     console.log('function hello')
+
+        // }
+
+
+
+        //         function Add(num1, num2) {
+        //             return num1 + num2
+        //         }
+
+
+        //    let res = Add(30,40)
+        //    let res2 = Add(309,40)
+
+        // console.log(Add(43,54))
+
+        // alert(Add(3,5))
+
+        // console.log(res2)
+
+
+        // function vivek(p1, p2) {
+        //     return 20 - 10
+        // }
+
+        // console.log('jatin')
+
+
+        // console.log(vivek())
+
+
+
+        // function jatin() {
+        //     document.getElementById('result').innerHTML = 'hello jatin'
+
+        // }
+        // function vivek() {
+        //     document.getElementById('result').innerHTML = 'hello vivelk'
+
+        // }
+        // function milan() {
+        //     document.getElementById('result').innerHTML = 'hello milan'
+
+        // }
+        // function unknown() {
+        //     document.getElementById('result').innerHTML = 'Kon Hai Re tu?'
+
+
+        // }
+
+
+        // function CHangeCss() {
+        //     document.getElementById('heading').style.backgroundColor = 'red'
+        // }
+
+        // function checkVal(val) {
+        //     let check = val
+
+        //     if (check == 'jatin') {
+        //         jatin()
+        //     } else if (check == 'milan') {
+        //         milan()
+        //     } else if (check == 'vivek') {
+        //         vivek()
+
+        //     } else if (check == '') {
+        //         document.getElementById('result').innerHTML = 'click button to show result'
+        //     } else {
+        //         unknown()
+        //     }
+
+        // }
+
+
+
+        // function DropDown() {
+        //     let drop = document.getElementById('drop')
+        //     let heading = document.getElementById('heading')
+
+        //     drop.classList.toggle('magan')
+        //     heading.classList.toggle('gamanleft')
+
+        // }
+
+        let heading = document.getElementById('heading')
+
+        let students = [
+            'jatin',
+            'vivek',
+            'milan',
+            'mayur',
+            'magan',
+            'mahi',
+            'dipak',
+            'kishor',
+            'nisha'
+        ]
+
+
+
+
+        // console.log(students.length)
+
+
+
+        // for (let i = 0; i < students.length; i++) {
+        //     let num = i + 1
+        //     heading.innerHTML += '<p>' + num + ' hello i am ' + students[i] + '</p>'
+        // }
+
+
+        // for (let x in students) {
+        //     console.log(x)
+        // }
+        // for (let x of students) {
+        //     console.log(x)
+        // }
+
+
+
+        students.map((x) => {
+            console.log(x)
+        })
+
+
+    </script>
+
+</body>
+
+</html>

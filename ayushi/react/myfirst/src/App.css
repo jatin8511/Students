@@ -1,0 +1,26 @@
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+.active {
+    color: red;
+    font-size: 18px;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+
+}
+
+.light {
+    background-color: white;
+    color: black;
+}

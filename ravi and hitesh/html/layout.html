@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar .navlinks {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar .navlinks li {
+            padding: 15px 20px;
+        }
+
+        .navbar .navlinks li:hover {
+            background-color: gray;
+        }
+
+        .navbar .search i {
+            padding: 15px 20px;
+        }
+
+        .navbar .search i:hover {
+            background-color: red;
+        }
+
+        .home {
+            height: 100vh;
+            width: 100%;
+            /* background-color: gray; */
+            display: flex;
+            justify-content: center;
+            background-image: url('/img.jpeg');
+            align-items: flex-end;
+        }
+
+        .box {
+            width: 50%;
+
+        }
+
+        .box h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .box p {
+            margin: 30px 0;
+        }
+
+        .box .login {
+
+            margin: 0 auto;
+            width: fit-content;
+        }
+
+        .login button {
+            padding: 10px 20px;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            margin: 0 10px;
+        }
+
+        .box2 {
+            background-color: red;
+            width: 50%;
+            height: 100%;
+        }
+
+        .box2 img {
+            width: 100%;
+        }
+
+        section.tourMain {
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            /* color: white; */
+        }
+
+        .tour .heading,
+        .tour .para {
+            text-align: center;
+        }
+
+        .tour {
+            margin: auto;
+            width: 50%;
+        }
+
+        .tour ul li {
+            background-color: white;
+            border-bottom: 1px solid gray;
+            display: flex;
+            padding: 10px;
+            gap: 20px;
+        }
+
+        .tour ul li.last {
+            justify-content: space-between;
+        }
+
+        .tour ul li p.sold {
+            background-color: red;
+            padding: 4px;
+            color: white;
+        }
+
+        .tour ul li p.num {
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50px;
+
+        }
+
+        .tour .cardWrapper {
+            display: flex !important;
+        margin: 30px 0;
+            gap: 15px;
+        }
+        .tour .cardWrapper .card{
+            background-color: white;
+        }
+
+        .tour .cardWrapper img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navlinks">
+            <li>HOME</li>
+            <li>BAND</li>
+            <li>TOUR</li>
+            <li>CONTACT</li>
+            <li>MORE</li>
+        </ul>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+    </div>
+    <div class="home">
+        <div class="box">
+            <h1>Welcome to Coding Cloud </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ea ad, doloribus necessitatibus,
+                nesciunt, laboriosam saepe provident blanditiis commodi autem nobis dolores consequatur dolore suscipit
+                temporibus voluptatum ex rerum. Assumenda!</p>
+            <div class="login">
+                <button>Login</button>
+                <button>Register</button>
+
+            </div>
+        </div>
+        <!-- <div class="box2">https://www.w3schools.com/css/default.asp
+            <img src="https://th.bing.com/th/id/OIP.ivDYIA_ouJ0XsQOwGLfy-QAAAA?pid=ImgDet&rs=1" alt="">
+        </div> -->
+
+    </div>
+
+    <section class="tourMain">
+        <div class="tour">
+            <h1 class="heading">TOUR DATES</h1>
+            <p class="para">Remember to book your tickets!</p>
+            <ul>
+                <li>
+                    <p>Septembar</p>
+                    <p class="sold">Sold out</p>
+                </li>
+                <li>
+                    <p>Septembar</p>
+                    <p class="sold">Sold out</p>
+                </li>
+                <li class="last">
+                    <p>Septembar</p>
+                    <p class="num">3</p>
+                </li>
+            </ul>
+            <div class="cardWrapper">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="">
+                    </div>
+                    <h3>New York</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sint architecto eaque iusto ipsam
+                        velit!</p>
+                    <button>Buy tickets</button>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="">
+                    </div>
+                    <h3>New York</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sint architecto eaque iusto
+                        ipsam
+                        velit!</p>
+                    <button>Buy tickets</button>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="">
+                    </div>
+                    <h3>New York</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sint architecto eaque
+                        iusto ipsam
+                        velit!</p>
+                    <button>Buy tickets</button>
+                </div>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.mainHeading {
+  color: red;
+}
+
+
+.about {
+  height: 100vh;
+  background-size: cover;
+}
+
+.home {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(221, 221, 221);
+}
+
+.dark {
+  background-color: rgb(34, 34, 34);
+}
+
+.dark h1 {
+  color: white;
+}
+
+.light h1 {
+  color: rgb(0, 0, 0);
+}
+
+.light {
+  background-color: rgb(221, 221, 221);
+}

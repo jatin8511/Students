@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+        table{
+            width: 60%;
+        }
+        .headings{
+            background-color: rgb(196, 196, 196);
+        }
+
+        td,th {
+            text-align: center;
+            padding: 10px 20px;
+        }
+        .mainHEading{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> HTML Tables</h1>
+
+    <table>
+        <tr class="mainHEading">
+            <th colspan="4">Students</th>
+        </tr>
+        <tr class="headings">
+            <th>No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Skill</th>
+        </tr>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>jatin</td>
+            <td>20</td>
+            <td>mern stack web devloper</td>
+        </tr>
+        <tr>
+           
+            <td>milan</td>
+            <td>22</td>
+            <td>front end web devloper</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>vivek</td>
+            <td>21</td>
+            <td> web devloper</td>
+        </tr>
+    </table>
+</body>
+
+</html>

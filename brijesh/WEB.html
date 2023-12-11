@@ -1,0 +1,363 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Bejoy foundation</title>
+    <link rel="shortcut icon" href="logo.jfif" type="image/x-icon">
+    <style>
+
+:root{
+    --red:rgb(255, 211, 211);
+    --big:100px;
+    --small:10px;
+}
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .navbar {
+
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 80px;
+
+        }
+
+        .navbar2 {
+            background-size: cover;
+            background-image: url('/71gj8RcvoD3HO6jg_mPRkAS1SBJkGMVxG8eNz_0BAOA=_plaintext_638227536433163252.jpg');
+            height: 100vh;
+            width: 100%;
+
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        ul li {
+            padding: 10px 30px;
+            color: white;
+        }
+
+        .navbar .img img {
+            padding: 10px;
+            height: 5vh;
+            width: 100px;
+        }
+
+        .nav button {
+            border-radius: 40px;
+            color: white;
+            background-color: black;
+            padding: 10px 25px;
+            font-weight: 600;
+        }
+
+        .nav button:hover {
+            background-color: black;
+
+        }
+
+
+        .drop1 .dropitem1 {
+            position: absolute;
+            display: none;
+            top: 100%;
+
+        }
+
+        .drop1 {
+            position: relative;
+        }
+
+        .drop1:hover .dropitem1 {
+            display: block;
+        }
+
+
+        .drop1 .dropitem1 p:hover {
+            color: white;
+            background-color: rgba(109, 100, 100, 0.411);
+        }
+
+
+        .drop2 .dropitem2 {
+            position: absolute;
+            display: none;
+            top: 100%;
+        }
+
+        .drop2:hover .dropitem2 {
+            display: block;
+        }
+
+        .drop2 {
+            position: relative;
+        }
+
+        .drop2 .dropitem2 p:hover {
+            color: white;
+            background-color: rgba(109, 100, 100, 0.411);
+        }
+
+        .drop3 .dropitem3 {
+            position: absolute;
+            display: none;
+            top: 100%;
+        }
+
+        .drop3:hover .dropitem3 {
+            display: block;
+        }
+
+        .drop3 {
+            position: relative;
+        }
+
+
+        .drop3 .dropitem3 p:hover {
+            color: white;
+            background-color: rgba(109, 100, 100, 0.411);
+        }
+
+        .a {
+            text-align: center;
+            color: white;
+            padding: 300px;
+        }
+
+        .a p {
+            font-size: 25px;
+        }
+
+        .a h1 {
+            font-size: 50px;
+        }
+
+        .A button {
+            border-radius: 40px;
+            color: white;
+            background-color: var(--red);
+            padding: 15px 40px;
+            font-size: 15;
+            font-weight: 600;
+        }
+
+        .a button:hover {
+            background-color: var(--red);
+
+        }
+
+        .p {
+            margin: 100px;
+            text-align: center;
+        }
+
+        .p p {
+            font-size: 18;
+            color: grey;
+        }
+
+        .p h2 {
+            font-size: 30;
+        }
+
+        .p span {
+            color: red;
+        }
+
+        .b .b1 {
+            justify-content: center;
+            display: flex;
+
+        }
+
+        .b1 img {
+            padding: 0px 40px;
+            width: 100%;
+        }
+
+        .b2 {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin: 0px 80px;
+
+        }
+
+        .b2 .pp {
+            font-size: 18;
+            color: grey;
+        }
+
+        .b2 .text {
+            color: aqua;
+        }
+
+        .icons {
+            background-color: rgb(63, 59, 59);
+            padding: 35px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .icons i {
+            padding: 0px 10px;
+        }
+
+        .footer {
+            color: rgba(206, 202, 202, 0.932);
+            background-color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: larger;
+            padding: 10px;
+        }
+
+        @media screen and (max-width:600px) {
+           .footer{
+            display: none !important    ;
+           }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar2">
+        <div class="navbar">
+
+
+            <div class="img">
+                <img src="logo-baikal.png" alt="">
+            </div>
+
+            <div class="nav">
+                <ul id="navUl">
+                    <li class="drop1">
+                        <span>Homes</span>
+
+                        <div class="dropitem1">
+                            <p>Default</p>
+                            <p>Classic</p>
+                            <P>Video Full height</P>
+                            <p>Video Classic</p>
+                            <p>Home Slider</p>
+                            <p>Slider Classic</p>
+                        </div>
+
+                    </li>
+
+                    <li class="drop2">
+                        <span>About</span>
+
+                        <div class="dropitem2">
+                            <p>What's We do</p>
+                            <p>Projects</p>
+                            <p>Partners</p>
+                            <p>contact</p>
+                        </div>
+
+                    </li>
+
+                    <li class="drop3">
+                        <span>News</span>
+
+                        <div class="dropitem3">
+                            <p>Archive</p>
+                            <p>Standard</p>
+                            <p>Features</p>
+                            <p>Slider</p>
+                        </div>
+
+                    </li>
+
+                    <li>Element</li>
+                    <div class="navbutton">
+                        <button>Purchase</button>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+        <div class="a">
+
+            <p>Success Stories</p>
+            <h1>START WITH YOU</h1>
+            <button>LEARN MORE</button>
+        </div>
+    </div>
+
+    <div class="p">
+        <h2>A Bootstrap 4 website template for enterpreneurial community.</h2>
+        <p>Some of the coolest websites on earth are empowered by Theme wagon. To continue the <br>
+            ambience, Baikal aims to help the rapidly growing enterpreneurial community to go <br>
+            online. It's loaded with many elements & features. See What you can do with it. <br><br>
+            For any question please contact <span>info@yourdomain.com</span></p>
+    </div>
+
+
+    <div class="b">
+
+        <div class="b1">
+            <div>
+
+                <img src="/IMG-20230619-WA0003.jpg" alt="">
+            </div>
+            <div>
+                <img src="/IMG-20230619-WA0005.jpg" alt="">
+            </div>
+
+
+        </div>
+
+        <div class="b2">
+
+            <div class="b2p">
+                <b>
+                    <p class="text">ABOUT</p>
+                </b>
+                <p class="pp">Find out about our organization, mission, our method, and <br>
+                    thr results of our decades of advocacy.
+                </p>
+                <p class="text">Learn More <i class="fa-sharp fa-solid fa-arrow-right"></i> </p>
+            </div>
+
+            <div class="b2pp">
+                <b>
+                    <p class="text">PORTFOLIO</p>
+                </b>
+                <p class="pp">Check out some of our featured portfolio from many successful <br>
+                    projects, carefully curated by us.</p>
+                <p class="text">See portfolio <i class="fa-sharp fa-solid fa-arrow-right"></i></p>
+            </div>
+
+        </div>
+    </div>
+    <div class="icons">
+
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-youtube"></i>
+    </div>
+
+    <div class="footer">
+        <b>
+            <p>459 BROADWAY, NEW YORK (212) 555-0123 PLACEHOLDER@GMAIL.COM</p>
+        </b>
+        <P>Powered by <u>Themewagon</u></P>
+    </div>
+
+</body>
+
+</html>

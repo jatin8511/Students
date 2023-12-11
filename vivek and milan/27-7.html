@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        h1 {
+            background-image: url('./images/dora.jpeg');
+            -webkit-background-clip: text;
+            background-position: left;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+
+    <h1>Hello World!</h1>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .tooltip {
+            background-color: red;
+            width: fit-content;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .tooltip .msg {
+            position: absolute;
+            background-color: black;
+            color: white;
+            width: 160px;
+            text-align: center;
+            /* display: none; */
+            right: 110%;
+            padding: 3px;
+            /* font-size: 10px; */
+            top: 0;
+            border-radius: 3px;
+        }
+
+        .tooltip .msg::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: 50%;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        .tooltip:hover .msg {
+            display: block;
+        }
+    </style>
+
+    <div class="tooltip">
+        <p>Hover Me</p>
+        <span class="msg">Hello Coding Cloud</span>
+    </div>
+
+    <style>
+        .img {
+            width: 300px;
+            margin: 100px auto;
+            /* border: 1px solid black; */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img img {
+            width: 100%;
+        }
+
+        .img .text {
+            background-color: rgba(222, 184, 135, 0.54);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 0%;
+            transition: .5s;
+            overflow: hidden;
+            width: 0%;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img:hover .text {
+            top: 0;
+            height: 100%;
+            left: 0;
+            border-radius: 0;
+            width: 100%;
+        }
+
+        .text button {
+            white-space: nowrap;
+            transition: .5s;
+
+        }
+
+        .img:hover button {
+            transform: rotate(360deg);
+        }
+    </style>
+    <div class="img">
+        <img src="https://www.w3schools.com/w3css/img_avatar3.png" alt="">
+        <div class="text"> <button>Hello Click me</button></div>
+    </div>
+
+</body>
+
+</html>

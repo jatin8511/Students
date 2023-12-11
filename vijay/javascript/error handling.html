@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <h3 id="res">
+
+    </h3>
+
+    <input type="text" id="magan">
+    <button onclick="CheckKar()">
+        gabru di boli
+    </button>
+
+
+    <script>
+        let res = document.getElementById('res')
+        const CheckKar = () => {
+            try {
+                let value = magan.value
+
+                if (!value.length) {
+                    throw "input can't be blank!"
+                }
+                if (isNaN(value)) {
+                    throw 'only numbers can be entered!'
+                }
+
+                // value = Number(magan.value)
+                if (value > 10) throw 'cant enter amount above 10'
+                if (value < 5) throw 'cant enter amount below 5'
+
+            } catch (e) {
+                res.innerHTML = e
+            } finally {
+                magan.value = ''
+            }
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

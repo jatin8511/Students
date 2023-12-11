@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .todo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+
+        .todoContainer {
+            text-align: center;
+            width: 100%;
+        }
+
+        .todoContainer input {
+            border: 2px solid black;
+            padding: 20px;
+            width: 50%;
+            background-color: white !important;
+            color: black;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        button {
+            padding: 20px;
+            background-color: blueviolet;
+            border-radius: 30px;
+            margin-left: 10px;
+            width: 100px;
+        }
+
+        .dataWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="todo">
+
+        <div class="todoContainer">
+
+            <input placeholder="write something" id="todo" type="text" />
+            <button onclick="Todo()">Todo</button>
+            <br />
+            <br />
+
+        </div>
+        <div class="dataWrapper" id="dataWrapper">
+        </div>
+    </div>
+
+    <script src="Todo.js">
+
+    </script>
+</body>
+
+</html>

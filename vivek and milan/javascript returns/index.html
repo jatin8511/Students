@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #card {
+            height: 300px;
+            width: 200px;
+            background-color: red;
+            position: relative;
+            left: 0;
+            transition: .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <h3 id="result">
+
+    </h3>
+    <div id="card">
+
+    </div>
+    <button onclick="Hello()">Click</button>
+
+    <br>
+
+    <h1 id="demo">hide and show this text</h1>
+    <button onclick="Hide()">Hide</button>
+    <button onclick="Show()">Show</button>
+    <button onclick="slide()">slide</button>
+    <button onclick="add(40,20)">addition</button>
+    <button onclick="greeting('milan')">milan</button>
+
+
+    <script>
+        let result = document.getElementById('result')
+        let heading = document.getElementById('demo')
+        let card = document.getElementById('card')
+
+        let magan = 'vivek'
+        const chhagan = 'patel'
+
+        function Hello() {
+            result.innerHTML = magan + chhagan
+            result.style.color = 'red'
+
+            console.log('hello world')
+        }
+
+
+        function Hide() {
+            heading.style.display = 'none'
+        }
+        function Show() {
+            heading.style.display = 'block'
+        }
+        function slide() {
+            card.style.left = '300px'
+        }
+
+
+
+
+        // function greeting(name) {
+        //     return 'hello ' + name
+        // }
+
+        // function bijukai() {
+
+        //     heading.innerHTML = greeting('jatin')
+        // }
+
+        function add(value1, value2) {
+            heading.innerHTML = value1 + value2
+        }
+
+
+    </script>
+</body>
+
+</html>

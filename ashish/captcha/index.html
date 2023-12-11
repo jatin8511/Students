@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+    <input type="text" id="input">
+    <button onclick="Submit()">Click</button>
+    <button onclick="Generate()">refresh</button>
+
+    <script>
+        let captcha = document.getElementById('demo')
+        let input = document.getElementById('input')
+        let arr = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'b', 'v', 'c', 'c', 'x', 'z', 'q', 'w', 'e', 't', 'y', 1, 2, 3, 4, 5, 5, 6, 9, 7]
+        let NewArray=[]
+const Generate = ()=>{
+
+    NewArray = arr.sort(() => .5 - Math.random()).slice(0, 4)
+    
+
+    captcha.innerHTML = NewArray.slice(0, 4).join('')
+}
+Generate()
+
+        
+        function Submit() {
+            if (input.value.trim() == NewArray.join('')) {
+                alert('ok')
+            }else{
+                alert('not matching')
+                Generate()
+            }
+        }
+    </script>
+
+</body>
+
+</html>

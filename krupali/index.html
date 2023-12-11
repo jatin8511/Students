@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 50px 100px;
+        }
+
+        .wrapper img {
+            width: 100%;
+        }
+
+        .wrapper .user {
+            padding: 20px;
+            box-shadow: 0 3px 10px rgb(214, 214, 214);
+        }
+
+        .wrapper .user button {
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="heading" class="wrapper ">
+
+
+        <div class="user">
+
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+        // function Hello(name, age) {
+        //     return 'hello i am ' + name + ' and i am ' + age + ' year old!'
+
+        // }
+
+        // function Add(num1, num2) {
+        //     return num1 + num2
+        // }
+
+
+        // let greeting = name => 'hii ' + name
+
+        // let output = Hello('jatin', 20)
+        // let output2 = Hello('krupali', 21)
+        // console.log(Add(3, 5))
+        // console.log(greeting('magan'))
+
+        // let a = 100
+
+        // if (a == 10) {
+        //     console.log('value of a is 10')
+        // } else if (a == 100) {
+        //     console.log('value of a is 100')
+        // } else {
+        //     console.log(' value of a is not 10')
+        // }
+
+
+        let users = [
+            {
+                name: 'jatin',
+                age: 20,
+                skill: 'mern stack developer',
+                img: 'https://th.bing.com/th/id/R.d930651664e60ab0a9873be8e2aa3e81?rik=EBlnjyuPTTRdNg&riu=http%3a%2f%2fwww.hdwallpapersfreedownload.com%2fuploads%2flarge%2fcartoons%2fdoraemon-full.jpg&ehk=bMkOVg25D1cJaXdXQdJOjvkUi5JVCeq9jQJw6sIeDKU%3d&risl=&pid=ImgRaw&r=0'
+            },
+            {
+                name: 'krupali',
+                age: 20,
+                skill: 'web developer',
+                img: 'https://th.bing.com/th/id/R.d930651664e60ab0a9873be8e2aa3e81?rik=EBlnjyuPTTRdNg&riu=http%3a%2f%2fwww.hdwallpapersfreedownload.com%2fuploads%2flarge%2fcartoons%2fdoraemon-full.jpg&ehk=bMkOVg25D1cJaXdXQdJOjvkUi5JVCeq9jQJw6sIeDKU%3d&risl=&pid=ImgRaw&r=0'
+            },
+            {
+                name: 'maahi',
+                age: 22,
+                skill: 'react developer',
+                img: 'https://th.bing.com/th/id/R.d930651664e60ab0a9873be8e2aa3e81?rik=EBlnjyuPTTRdNg&riu=http%3a%2f%2fwww.hdwallpapersfreedownload.com%2fuploads%2flarge%2fcartoons%2fdoraemon-full.jpg&ehk=bMkOVg25D1cJaXdXQdJOjvkUi5JVCeq9jQJw6sIeDKU%3d&risl=&pid=ImgRaw&r=0'
+            },
+            {
+                name: 'sumit',
+                age: 20,
+                skill: 'software tester',
+                img: 'https://th.bing.com/th/id/R.d930651664e60ab0a9873be8e2aa3e81?rik=EBlnjyuPTTRdNg&riu=http%3a%2f%2fwww.hdwallpapersfreedownload.com%2fuploads%2flarge%2fcartoons%2fdoraemon-full.jpg&ehk=bMkOVg25D1cJaXdXQdJOjvkUi5JVCeq9jQJw6sIeDKU%3d&risl=&pid=ImgRaw&r=0'
+            },
+        ]
+        let heading = document.getElementById('heading')
+
+
+
+        users.map((user) => {
+            heading.innerHTML += `  <div class="user">
+        <div class="img">
+            <img src="${user.img}" alt="">
+        </div>
+        <h3>
+${user.name}
+        </h3>
+        <h4>${user.skill}</h4>
+        <div class="add">
+            <button>Hire</button>
+        </div>
+    </div>`
+        })
+
+
+        // let users = ['jatin', 'krupali', 'maahi', 'magan']
+
+
+        // let mobile = {
+        //     name: 'samsung',
+        //     ram: 8,
+        //     storage: 128,
+        //     color: 'red'
+        // }
+
+        // users.push('tisha')
+        // users.pop()
+
+
+        // users.shift()
+        // users.unshift('harsh')
+
+
+        // users.splice(2,2 , 'sumit')
+
+
+        // let part = users.slice(1, 3)
+
+
+        // for (let i = 0; i < users.length; i++) {
+        //     console.log(users[i])
+        //     heading.innerHTML += `<li class='user'> ${users[i]} </li>`
+        // }
+
+        // for (let i of users) {
+        //     console.log(i)
+        //     heading.innerHTML += `<li class='user'> ${i} </li>`
+        // }
+
+        // heading.innerHTML = users.map((x) => {
+        //     return `<li class='user'> ${x} </li>`
+        // }).join('')
+
+
+        // console.log(part)
+
+
+
+    </script>
+
+</body>
+
+</html>

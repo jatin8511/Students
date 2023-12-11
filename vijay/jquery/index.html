@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p class="para">hello</p>
+    <h3 id="h3">Result</h3>
+    <div class="">
+        <p class="para">magan</p>
+    </div>
+    <button class="btn">Click</button>
+
+    <script>
+        $(document).ready(() => {
+
+            let elem = $('div > .para')
+
+            $('.btn').hover(() => {
+                elem.html('magan bhai')
+            }, () => {
+                elem.html('magan')
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>

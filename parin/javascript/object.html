@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Javascript objects</h1>
+
+    <h3 id="res">
+        result
+    </h3>
+
+
+
+
+    <script>
+        let check = document.getElementById('res')
+
+        let user = {
+            name: 'parin',
+            age: 20,
+            skill: 'web developer'
+        }
+
+        let user2 = {
+            name: 'jatin',
+            age: 20,
+            skill: 'mern stck developer'
+        }
+
+        console.log(user)
+
+        check.innerHTML = 'hello my name is ' + user.name + ' and i am a ' + user.skill
+
+
+    </script>
+
+</body>
+
+</html>

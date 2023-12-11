@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 25%;
+            height: 100px;
+            background-color: red;
+        }
+
+        @media screen and (max-width:600px) {
+            h1 {
+                color: green;
+            }
+
+            .box {
+                width: 50%;
+            }
+        }
+
+
+        @media screen and (max-width:400px) {
+            .box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>Hello World!</h1>
+
+
+
+    <div class="wrapper">
+        <div class="box">Hello</div>
+        <div class="box">Hello</div>
+        <div class="box">Hello</div>
+        <div class="box">Hello</div>
+    </div>
+
+
+</body>
+
+</html>

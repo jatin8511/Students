@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Javascript errors</h1>
+    <input type="text" id="input"><button onclick="Check()">Check</button>
+    <h3 id="res"></h3>
+
+    <script>
+        const Check = () => {
+            try {
+                let value = input.value
+                if (value.trim() == '') throw 'value cant be blank'
+
+                if (isNaN(value)) {
+                    throw 'input is not a number please enter valid number!'
+                }
+                if (value > 50) throw "value can't be more then 50"
+                if (value < 10) throw "value can't be less then 10"
+
+            } catch (e) {
+                res.innerHTML = e
+            } finally {
+                input.value = ''
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="cartElem" id="cartElem">
+        <div class="header">
+            <h3>Cart</h3>
+            <i onclick="HideCart()" class="fa-solid fa-x"></i>
+        </div>
+
+        <div class="cartWrapper" id="cartWrapper">
+
+        </div>
+    </div>
+    <div class="navbar" data-aos='fade-down'>
+        <h1 class="logo">
+            My Store
+        </h1>
+        <div class="search">
+            <input id="searchInput" type="search">
+            <button onclick="Search()">Search</button>
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <div class="cart">
+            <i onclick="ShowCart()" class="fa-solid fa-shopping-bag"></i>
+        </div>
+    </div>
+    <div class="myswiper">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://www.clipartkey.com/mpngs/m/216-2166322_swiper.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.clipartkey.com/mpngs/m/216-2166322_swiper.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.clipartkey.com/mpngs/m/216-2166322_swiper.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.clipartkey.com/mpngs/m/216-2166322_swiper.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.clipartkey.com/mpngs/m/216-2166322_swiper.png" alt="">
+                </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <h1>Products</h1>
+
+    <div class="wrapper" id="wrapper">
+
+    </div>
+
+
+
+
+    <script src="script.js">
+
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>

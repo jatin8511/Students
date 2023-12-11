@@ -1,0 +1,11 @@
+:root {
+    --main: rgb(255, 145, 0);
+    --gray: rgb(141, 141, 141);
+    --black: rgb(31, 31, 31);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

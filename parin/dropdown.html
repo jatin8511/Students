@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 50px;
+            background-color: rgb(209, 209, 209);
+            color: rgb(0, 0, 0);
+            align-items: center;
+        }
+
+        .navbar ul {
+            display: flex;
+        }
+
+        .navbar ul li {
+            list-style-type: none;
+            padding: 20px 20px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown .drop {
+            position: absolute;
+            right: 0;
+            background-color: red;
+            top: 100%;
+            width: 400px;
+            display: none;
+        }
+
+        .dropdown .drop p {
+            padding: 10px;
+        }
+
+        .dropdown:hover .drop {
+            display: block;
+        }
+
+        .dropdown .drop p:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Logo</h1>
+        <ul>
+            <li class="dropdown">
+                <div class="drop">
+                    <p>
+                        Itme1
+                    </p>
+                    <p>
+                        Itme1
+                    </p>
+                    <p>
+                        Itme1
+                    </p>
+                    <p>
+                        Itme1
+                    </p>
+                    <p>
+                        Itme1
+                    </p>
+                    <p>
+                        Itme1
+                    </p>
+                </div>
+                <p>Home</p>
+
+            </li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

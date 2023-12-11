@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,
+        select {
+            padding: 10px;
+            border: 1px solid red;
+            border-radius: 10px;
+        }
+
+        form div {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>forms</h1>
+
+    <form action="">
+        <div>
+
+            <label for="name">Name : </label>
+            <input readonly value="jatin" type="text" id="name">
+        </div>
+        <div>
+            <label for="email">Email : </label>
+            <input disabled type="email" id="email">
+
+        </div>
+        <div>
+            <p>favorite web language : </p>
+            <div> <label for="html">HTML : </label>
+                <input type="radio" name="favLang" id="html">
+            </div>
+            <div> <label for="css">css : </label>
+                <input type="radio" name="favLang" id="css">
+            </div>
+            <div> <label for="js">Javascript : </label>
+                <input type="radio" name="favLang" id="js">
+            </div>
+        </div>
+        <div>
+            <p>i have a : </p>
+            <div>
+                <label for="car">Car : </label>
+                <input type="checkbox" name="" id="car">
+            </div>
+            <div>
+                <label for="bike">Bike : </label>
+                <input type="checkbox" name="" id="bike">
+            </div>
+            <div>
+                <label for="boat">Boat : </label>
+                <input type="checkbox" name="" id="boat">
+            </div>
+        </div>
+        <div><label for="States">Select State</label>
+            <select name="states" id="States">
+                <option value="">Gujarat</option>
+                <option selected value="">Maharastra</option>
+                <option value="">Bihar</option>
+                <option value="">Madhyaprades</option>
+                <option value="">Gujarat</option>
+            </select>
+        </div>
+        <div>
+
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+</body>
+
+</html>

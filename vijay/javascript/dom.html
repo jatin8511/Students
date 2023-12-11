@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Html Dom
+    </h1>
+
+    <div id="result"><i>Result</i></div>
+    <button onclick="BulbOff()">Bulb Off</button>
+
+    <img id="img" src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg" alt="">
+    <!-- https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg -->
+
+    <button onclick="BulbOn()">Bulb On</button>
+
+    <hr>
+    <h1 id="heading">Change This Text</h1>
+    <button onclick="Change()">Change Text</button>
+    <script>
+        let result = document.getElementById('result')
+        let img = document.getElementById('img')
+        let heading = document.getElementById('heading')
+
+
+        let name = 'vijay'
+        result.innerHTML = `<li> ${name} </li> <li> ${name} </li> <li> ${name} </li> <li> ${name} </li>`
+
+        function BulbOn() {
+            img.src = 'https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg'
+        }
+        function BulbOff() {
+            img.src = 'https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg'
+
+        }
+        function Change() {
+            heading.innerHTML = 'Hello Coding Cloud!'
+            heading.style.backgroundColor = 'red'
+        }
+
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

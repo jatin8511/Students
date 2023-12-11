@@ -1,0 +1,12 @@
+.mainHeading {
+  color: red;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: white;
+}

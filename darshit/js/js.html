@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 50px;
+            padding: 50px 100px;
+        }
+
+        .card {
+
+            box-shadow: 0 3px 10px gray;
+            padding: 20px;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart {
+            height: 100vh;
+            width: 30%;
+            background-color: gray;
+            position: fixed;
+            top: 0;
+            overflow: auto;
+            transition: .3s;
+            left: -1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Logo</h1> <button onclick="CartToggle()">Cart</button>
+    </div>
+    <div class="cart" id="cart"></div>
+    <h1>Javascript</h1>
+
+    <div id="wrapper">
+
+    </div>
+
+    <script>
+
+        let cartElem = document.getElementById('cart')
+
+        const CartToggle = () => {
+            if (cartElem.style.left == '-1000px') {
+                cartElem.style.left = '0'
+            } else {
+                cartElem.style.left = '-1000px'
+            }
+        }
+
+        // let students = ['jatin', 'darshit', 'magan', 'maaahi', 'deven', 'kavita']
+        let students = [
+
+            {
+                name: 'darshit',
+                skill: 'web developer',
+                id: 1,
+                img: 'https://www.hdwallpapersfreedownload.com/uploads/large/cartoons/doraemon-full.jpg'
+
+            },
+            {
+                name: 'jatin',
+                skill: 'mern stack developer',
+                id: 5,
+                img: 'https://www.hdwallpapersfreedownload.com/uploads/large/cartoons/doraemon-full.jpg'
+
+            },
+            {
+                name: 'maaahi',
+                skill: 'react developer',
+                id: 4,
+                img: 'https://www.hdwallpapersfreedownload.com/uploads/large/cartoons/doraemon-full.jpg'
+
+            },
+            {
+                name: 'deven',
+                skill: 'mean stack developer',
+                id: 3,
+                img: 'https://www.hdwallpapersfreedownload.com/uploads/large/cartoons/doraemon-full.jpg'
+
+            },
+            {
+                name: 'kavita',
+                skill: 'website disigner',
+                id: 2,
+                img: 'https://www.hdwallpapersfreedownload.com/uploads/large/cartoons/doraemon-full.jpg'
+
+            },
+
+        ]
+
+        let cart = []
+
+        students.map((student) => {
+            document.getElementById('wrapper').innerHTML += `
+            <div class="card">
+            <div class="img">
+                <img src="${student.img}" alt="">
+            </div>
+            <h3>${student.name}</h3>
+            <p>${student.skill}</p>
+            <div class="add">
+                <button onclick='AddToCart(${student.id})'>Hire</button>
+            </div>
+        </div>
+        `
+
+        })
+
+        const AddToCart = (id) => {
+            let obj = students.find((x) => x.id == id)
+
+            cart.push(obj)
+
+            cartElem.innerHTML = cart.map((student) => {
+                return `
+            <div class="card">
+            <div class="img">
+                <img src="${student.img}" alt="">
+            </div>
+            <h3>${student.name}</h3>
+            <p>${student.skill}</p>
+            <div class="add">
+                <button onclick='AddToCart(${student.id})'>Hire</button>
+            </div>
+        </div>
+        `
+
+            })
+
+        }
+
+        // let student = students[2]
+        // document.getElementById('wrapper').innerHTML =`
+        //     <div class="card">
+        //     <div class="img">
+        //         <img src="${student.img}" alt="">
+        //     </div>
+        //     <h3>${student.name}</h3>
+        //     <p>${student.skill}</p>
+        //     <div class="add">
+        //         <button>Hire</button>
+        //     </div>
+        // </div>
+        // `
+
+
+        // students.push('navi vastu')
+        // students.pop()
+
+        // students.shift()
+        // students.unshift('koi vastu')
+
+
+        // let part = students.slice(2,4)
+
+
+        //   students.splice(3, 1, )
+
+        // let Std = students.map((x) => {
+        //     return '<h1>' + x + '</h1>'
+        // })
+
+
+        // document.getElementById('wrapper').innerHTML = Std.join('')
+
+        // console.log(Std)
+
+        // console.log(students)
+
+    </script>
+</body>
+
+</html>

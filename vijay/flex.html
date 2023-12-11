@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: rgb(35, 31, 74);
+            --secondry: rgb(220, 220, 220);
+        }
+
+        body {
+            background-color: var(--secondry);
+            width: 100%;
+            /* overflow-x: hidden; */
+        }
+
+        .navbar {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            background-color: var(--primary);
+            color: white;
+            height: 70px;
+        }
+
+        .card {
+            box-shadow: 0 3px 10px gray;
+            /* width: 300px; */
+            /* padding: 15px; */
+            margin: 20px;
+            /* overflow: hidden; */
+            position: relative;
+        }
+
+        .card img {
+            transition: .5s;
+            width: 100%;
+        }
+
+        .card:hover img {
+            transform: translate(0, -50px);
+        }
+
+        .card h2 {
+
+            text-align: center;
+        }
+
+        .card p {
+            margin: 10px 0;
+        }
+
+        .card button {
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+        }
+
+        .cardMain {
+            position: relative;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .main {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            flex-wrap: wrap;
+        }
+
+        i {
+            font-size: 30px;
+            color: red;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+            transition: .5s;
+            background-color: rgba(255, 0, 0, 0.184);
+            ;
+        }
+
+        .card:hover .overlay {
+            top: 30%;
+        }
+
+        .card i {
+            background-color: black;
+            ;
+            position: absolute;
+            bottom: 0;
+            z-index: 10;
+            transition: .5s;
+            left: 50%;
+            translate: -50% 0;
+            color: white;
+            border-radius: 50%;
+            padding: 5px;
+            opacity: 0;
+        }
+
+        .card:hover i {
+            opacity: 1;
+            translate: -50% 50%;
+
+        }
+
+
+
+
+        @media screen and (max-width:1000px) {
+            .main {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            .main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+                flex-direction: column;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <ul class="navbar">
+        <li> <i class="fa-solid fa-user"></i> Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ul>
+    <h1>Display flex</h1>
+
+
+    <div class="main">
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <i class="fa-solid fa-plus"></i>
+            <div class="cardMain">
+                <div class="overlay">
+                </div>
+                <img src="apple.jpeg" alt="">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellendus cupiditate mollitia
+                    nemo
+                    cum placeat enim similique! Esse, consequuntur consequatur.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, iure.</p>
+                <div class="add"><button><b>Add To Cart</b></button></div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>

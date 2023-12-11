@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .card * {
+            margin: 10px 0;
+        }
+
+        .card {
+            box-shadow: 0 3px 10px rgb(192, 192, 192);
+            width: 50%;
+            padding: 30px;
+        }
+
+        .card button {
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            color: white;
+            font-weight: 700;
+            background-image: linear-gradient(rgb(0, 0, 0), rgba(1, 1, 180, 0.462));
+        }
+
+        .hiredcard button {
+            width: 100%;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 10px;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 100px;
+        }
+
+        .hiredcard {
+            display: grid;
+            grid-template-columns: 20% 40% auto;
+            box-shadow: 0 3px 10px gray;
+            margin: 20px 0;
+            height: 100px;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 50px;
+            align-items: center;
+            position: relative;
+
+            background-color: rgb(174, 174, 174);
+        }
+
+        .navbar ul {
+            display: flex;
+
+        }
+
+        .navbar ul li {
+            padding: 20px 20px;
+            list-style: none;
+        }
+
+        .navbar .icons {
+            display: flex;
+            gap: 20px;
+            font-size: 20px;
+        }
+
+        .navToggle {
+            display: none;
+        }
+
+        .navtoggleClose {
+            display: none;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .drop {
+            position: absolute;
+            top: 100%;
+            background-color: black;
+            color: white;
+            width: 150px;
+            padding: 10px;
+            display: none;
+        }
+
+        .drop p {
+            padding: 10px 0;
+        }
+
+        .dropdown:hover .drop {
+            display: block;
+        }
+
+        @media screen and (max-width:1100px) {
+            .navbar ul li {
+                padding: 20px 10px;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            .navtoggleClose {
+                display: block;
+                margin: 15px
+            }
+
+            .drop {
+                position: static;
+                background-color: white;
+                color: black;
+            }
+
+            .navToggle {
+                display: block;
+            }
+
+            .navbar {
+                padding: 0 15px;
+            }
+
+            .navbar ul {
+                transition: 1s;
+                overflow: auto;
+                position: fixed;
+                background-color: white;
+                left: -1000px;
+                height: 100vh;
+                top: 0;
+                box-shadow: 0 3px 10px gray;
+                flex-direction: column;
+                width: 300px;
+            }
+
+            .navbar ul li {
+                padding: 10px;
+                border-bottom: 1px solid gray;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <i onclick="NavOpen()" class="fa-solid fa-bars navToggle"></i>
+        <h1 class="logo">Logo</h1>
+        <ul id="Nav">
+            <i onclick="NavClose()" class="fa-solid fa-x navtoggleClose"></i>
+            <li>Home</li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Service</li>
+            <li class="dropdown">
+                <p>Dropdown</p>
+                <div class="drop">
+                    <p>Hello</p>
+                    <p>Hello</p>
+                    <p>Hello</p>
+                </div>
+            </li>
+            <li>Service</li>
+            <li>Service</li>
+            <li>Contact</li>
+        </ul>
+        <div class="icons">
+            <p><i class="fa-solid fa-user"></i></p>
+            <p><i class="fa-brands fa-facebook"></i></p>
+            <p><i class="fa-brands fa-whatsapp"></i></p>
+        </div>
+    </div>
+    <h1> Javascript Arrays</h1>
+    <style>
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .search>div {
+            width: 60%;
+            /* background-color: red;\ */
+        }
+
+        .search input {
+            width: 90%;
+            padding: 15px;
+            outline: none;
+            border: none;
+            border: 1px solid gray;
+        }
+
+        .search button {
+            border: none;
+            width: 9%;
+            padding: 15px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <div class="search">
+        <div>
+            <input id="search" placeholder="Search..." type="search" name="" id="">
+            <button onclick="SearchHandler()">Search</button>
+        </div>
+    </div>
+    <h3 id="SearchResult"></h3>
+    <div class="main">
+        <div id="result">
+
+        </div>
+        <div class="hired">
+            <h3>Hired Students</h3>
+            <div class="hiredWrapper" id="hired">
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+        let result = document.getElementById('result')
+        let hiredElement = document.getElementById('hired')
+
+
+        let numbers = [4554, 32, 566354, 32, 5465735, 6645, 66556, 45, 645, 63, 5, 43, 455, 6453, 435, 5364]
+        let students = [{ name: 'isha', age: 20, skill: 'front-end Web Developer', id: 1 },
+        { img: 'https://th.bing.com/th/id/OIP.U2P_qZTgJCRkOpFHxX72pwHaJ-?pid=ImgDet&rs=1', name: 'tisha', age: 20, skill: 'front-end Web Developer', id: 6 },
+        { name: 'jatin', age: 21, skill: ' Web Developer', id: 2 },
+        { name: 'magan', age: 22, skill: 'Mern Stack Developer', id: 3 },
+        { name: 'maahi', age: 50, skill: 'Android Developer', id: 4 },
+        { name: 'harsh', age: 34, skill: 'Django Developer', id: 5 },
+        ]
+
+
+        let HiredStudents = []
+
+        // let person = {
+        //     name: 'magan',
+        //     age: 20,
+        //     skill: 'web developer'
+        // }
+
+        // console.log(person.name)
+
+        students.map((val, index) => {
+            result.innerHTML += `<div class="card">
+                <div class='img'><img src='${val.img}'></div>
+            <h3>
+${val.name}
+            </h3>
+            <p>${val.skill}</p>
+            <div>
+                <button onclick='Hire(${val.id})'>Hire</button>
+            </div>
+        </div>`
+        })
+
+
+        const Hire = (id) => {
+            let hiredStudent = students.find((student) => student.id == id)
+            if (HiredStudents.find((ok) => ok.id == id)) {
+                alert('already hired')
+            } else {
+                HiredStudents.push(hiredStudent)
+            }
+
+            hiredElement.innerHTML = HiredStudents.map((val) => {
+                return `<div class="hiredcard">
+            <h3>
+${val.name}
+            </h3>
+            <p>${val.skill}</p>
+            <div>
+                <button onclick='Reject(${val.id})'>Reject</button>
+            </div>
+        </div>`
+            }).join('')
+        }
+
+        const Reject = (id) => {
+            HiredStudents = HiredStudents.filter((x) => x.id != id)
+
+            hiredElement.innerHTML = HiredStudents.map((val) => {
+                return `<div class="hiredcard">
+            <h3>
+${val.name}
+            </h3>
+            <p>${val.skill}</p>
+            <div>
+                <button onclick='Reject(${val.id})'>Reject</button>
+            </div>
+        </div>`
+            }).join('')
+        }
+
+
+
+
+        let nav = document.getElementById('Nav')
+        const NavOpen = () => {
+            nav.style.left = '0'
+        }
+        const NavClose = () => {
+            nav.style.left = '-1000px'
+        }
+
+
+        // search 
+
+        let SearchResult = document.getElementById('SearchResult')
+        let Search = document.getElementById('search')
+        console.log(Search)
+        const SearchHandler = () => {
+            let searchedVal = students.filter((x) => x.name.toLowerCase().includes(Search.value.toLowerCase()))
+
+            result.innerHTML = searchedVal.map((val, index) => {
+                return `<div class="card">
+                <div class='img'><img src='${val.img}'></div>
+            <h3>
+${val.name}
+            </h3>
+            <p>${val.skill}</p>
+            <div>
+                <button onclick='Hire(${val.id})'>Hire</button>
+            </div>
+        </div>`
+            }).join('')
+
+            SearchResult.innerHTML =` ${searchedVal.length} : Results for ${Search.value}`
+
+            Search.value =''
+
+        }
+    </script>
+</body>
+
+</html>

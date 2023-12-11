@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1 id="head">hello</h1>
+    <button onclick="Clicked()">Click</button>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .card img{
+            width: 100%;
+        }
+    </style>
+    <div class="box">
+
+        <div id="ul">
+
+        </div>
+    </div>
+</body>
+
+
+
+
+
+<script>
+    let list = document.getElementById('ul')
+
+
+    let students = [
+        {
+            name: 'magan',
+            age: 20,
+            skill: 'web develper',
+            img: 'https://gradepowerlearning.com/wp-content/uploads/2018/12/Young-student-smiling-holding-books..jpeg'
+        },
+        {
+            name: 'magan',
+            age: 20,
+            skill: 'web develper',
+            img: 'https://gradepowerlearning.com/wp-content/uploads/2018/12/Young-student-smiling-holding-books..jpeg'
+        },
+        {
+            name: 'magan',
+            age: 20,
+            skill: 'web develper',
+            img: 'https://gradepowerlearning.com/wp-content/uploads/2018/12/Young-student-smiling-holding-books..jpeg'
+        },
+        {
+            name: 'magan',
+            age: 20,
+            skill: 'web develper',
+            img: 'https://gradepowerlearning.com/wp-content/uploads/2018/12/Young-student-smiling-holding-books..jpeg'
+        },
+    ]
+
+
+
+    students.map((student) => {
+        list.innerHTML += ` <div class="card">
+                <div class="img">
+                    <img src="${student.img}" alt="">
+                </div>
+                <h3>${student.name}</h3>
+                <p>${student.age}</p>
+                <p>${student.skill}</p>
+            </div>`
+    })
+
+
+
+</script>
+
+</html>

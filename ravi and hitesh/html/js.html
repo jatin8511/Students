@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images.png" type="image/x-icon">
+    <style>
+        .headingBtn {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">Hello</h1>
+    <button onclick="Magan()">Click</button>
+    <h1 class="headingBtn" onclick="Magan2()">Magan</h1>
+    <script>
+        function Magan() {
+            document.getElementById('heading').style.color = 'red'
+        }
+        function Magan2() {
+            document.getElementById('heading').style.color = 'blue'
+        }
+    </script>
+</body>
+
+</html>

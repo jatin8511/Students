@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.imagesMain{
+    display: flex;
+
+    margin: 30px auto;
+    gap: 25px;
+    width: 70%;
+}
+.imagesMain img{
+    width: 100%;
+}
+.imagesMain .image{
+    position: relative;
+}
+.imagesMain .image p{
+ 
+    position: absolute;
+    transform: translate(-50% , -50%);
+    color: white;
+    left: 50%;
+    padding: 10px 0;
+    top: 50%;
+}
+
+.imagesMain .image p:hover{
+    border-bottom: 2px solid white;
+
+}
+

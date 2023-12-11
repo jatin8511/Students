@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading">hello world!</h1>
+    <button onclick="MyFunc('dhruvin',6)">Ok</button>
+    <button onclick="MyFunc(12,50)">Ok2</button>
+
+
+    <script>
+        // normal function
+        function MyFunc(name, age) { //p1 and p2 are the parameters of function  
+            return `my name is ${name} and i am ${age} years old!`// p1+ p2 //return value here...
+        }
+
+        // arrow function 
+        const myArrowFunc3 = (name) => {
+            return 'hello' + name
+        }
+
+        const myArrowFunc = (name) => 'hello' + name
+
+        const myArrowFunc2 = name => 'hello' + name
+
+
+        let arr = [
+            'jatin',
+            'magan',
+            'dhruvin',
+            'ashish',
+            'hari',
+            'chhagan'
+        ]
+
+        let values = 'init'
+        console.log(values)
+        arr.map((x) => {
+            values += ' hello ' + x
+        })
+
+        function myMap(arr) {
+            let values = ''
+            for (let i = 0; i < arr.length; i++) {
+                values += 'jsk' + arr[i] + '<br>'
+            }
+
+            document.getElementById('heading').innerHTML = values
+        }
+        myMap()
+
+
+
+
+
+        console.log(MyFunc('jatin', 20))    //function invocation / call 
+
+    </script>
+</body>
+
+</html>

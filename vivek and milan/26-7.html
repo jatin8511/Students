@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        .dropdown {
+            width: fit-content;
+            position: relative;
+        }
+        .dropdown > p{
+            padding: 10px 40px;
+            background-color: rgb(212, 212, 212);
+        }
+        .drop p{
+            padding: 5px 20px;
+            border-bottom: 1px solid gray;
+        }
+        .drop p:hover{
+            background-color: gray;
+        }
+        .drop{
+            display: none;
+            position: absolute;
+            background-color: gainsboro;
+            width: 100%;
+            left: 0;
+            top: 100%;  
+        }
+    
+        .dropdown:hover .drop{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello World</h1>
+
+
+    <div class="dropdown">
+        <p>Hover Over Me</p>
+        <div class="drop">
+            <p>Hello World</p>
+            <p>Hello World</p>
+            <p>Hello World</p>
+            <p>Hello World</p>
+            <p>Hello World</p>
+            <p>Hello World</p>
+        </div>
+    </div>
+    <h3>Kai bi</h3>
+
+
+    
+
+
+</body>
+
+</html>

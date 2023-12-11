@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+
+    <p class="para bijo">para</p>
+    <p class="para">para</p>
+    <p class="para bijo">para</p>
+    <p class="para">para</p>
+    <p class="para">para</p>
+    <p class="para">para</p>
+    <p class="para">para</p>
+
+
+    <button id="btn2">click</button>
+    <script>
+        // global scope
+        // let btn = document.getElementById('btn2')
+        let btn = document.getElementsByClassName('para')
+
+
+        for (i = 0; i < btn.length; i++) {
+            console.log(i)
+            if (btn[i].classList.contains('bijo')) {
+
+                btn[i].style.color = 'red'
+            }
+        }
+
+
+        let a = 10;
+        var b = 20;
+        const c = 30;
+        console.log(a, b, c)
+
+
+        // block scope 
+        {
+            let d = 40;
+            var e = 50;
+            console.log(d, e)
+        }
+        console.log(e)
+
+
+
+        // function scope 
+
+
+        function Hello() {
+            var name2 = 'magan'
+            console.log(a, b, c)
+        }
+
+        (function () {
+            alert('auto call')
+        })()
+
+
+
+        // console.log(name2)
+        Hello()
+
+
+
+
+
+
+        let greeting2 = () => {
+            alert('greeting run...')
+        }
+
+        function greeting() {
+            // let a = 'hello'
+            // let b = 'hii'
+            // return { a, b }
+            alert('ok')
+            greeting2()
+        }
+
+
+        btn2.addEventListener('click', () => {
+            greeting()
+        })
+
+
+
+        let arr = ['magan', 'chhagan']
+
+        arr.shift('gagan')
+
+        console.log(arr)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

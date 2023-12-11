@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Javscript Conditions</h1>
+
+    <h3 id="res">
+        result
+    </h3>
+    <input placeholder="Enter Your Name..." type="text" id="name"><br>
+    <input placeholder="Enter Your age..." type="number" id="num"><br>
+
+    <button onclick="Check()">Gabru di boli</button>
+
+    <script>
+        let res = document.getElementById('res')
+        let num = document.getElementById('num')
+        let name = document.getElementById('name')
+
+        function Check() {
+            let check = Number(num.value)
+            // if (check == 100) {
+            //     res.innerHTML = 'value is 100'
+            // } else if (check == 50) {
+            //     res.innerHTML = 'value is 50'
+
+            // } else {
+            //     res.innerHTML = 'value is ' + check
+
+            // }
+
+
+            // if (check > 18) {
+            //     res.innerHTML = 'Hello ' + name.value + ' you are eligible'
+            // } else {
+            //     res.innerHTML = 'Hello ' + name.value + ' you are not eligible'
+
+            // }
+
+
+            check > 18 ? res.innerHTML = 'Hello ' + name.value + ' you are eligible' : res.innerHTML = 'Hello ' + name.value + ' you are not eligible'
+        }
+
+
+
+    </script>
+</body>
+
+</html>

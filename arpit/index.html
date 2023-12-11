@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #student1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        #student1 img {
+            width: 100%;
+        }
+
+        #student1>div {
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgb(216, 216, 216);
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="Kaibi('jatin')">Click</button>
+    <button onclick="Kaibi('arpit')">Click</button>
+    <button onclick="Kaibi('magan')">Click</button>
+    <h1 id="heading">Result</h1>
+
+    <hr>
+
+    <h3>Student 1</h3>
+    <div id="student1">
+
+    </div>
+    <h3>Student 2</h3>
+    <div id="student2">
+
+    </div>
+    <h3>Student 3</h3>
+    <div id="student3">
+
+    </div>
+
+    <script>
+        let h1 = document.getElementById('heading')
+        let student1 = document.getElementById('student1')
+        let student2 = document.getElementById('student2')
+        let student3 = document.getElementById('student3')
+
+
+
+        function Hello() {
+            console.log('helllo ')
+        }
+
+        function Add(p1, p2) {
+            return p1 + p2
+        }
+
+        function Kaibi(name) {
+            h1.innerHTML = 'hello ' + name
+            h1.style.color = 'red'
+        }
+
+        console.log(Add(30, 29))
+        // alert(Add(72, 84))
+        let laptop = {
+            name: 'dell',
+            storage: 256,
+            ram: 12,
+            color: 'black'
+        }
+
+        h1.innerHTML = 'hello  i have a ' + laptop.name + ' laptop' + ' and it has ' + laptop.storage + 'gb storage'
+
+
+        let students = [
+            { name: 'jatin', age: 20, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'deven', age: 22, skill: 'mern stack developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' },
+            { name: 'arpit', age: 25, skill: 'web developer', img: 'https://th.bing.com/th/id/OIP.YfstaxxV6NVxx5RhWfYKHgAAAA?pid=ImgDet&rs=1' }
+        ]
+        student1.innerHTML = students.map((x) => {
+            return `<div class="std">
+            <img src = "${x.img}" alt = "" >
+            <h2>${x.name}</h2>
+            <h3>${x.skill}</h3>
+        </div > `
+        }).join('')
+
+        // student1.innerHTML = `<div class="std">
+        //     <img src = "${students[0].img}" alt = "" >
+        //     <h2>${students[0].name}</h2>
+        //     <h3>${students[0].skill}</h3>
+        // </div > `
+        // student2.innerHTML = `<div class="std">
+        //     <img src = "${students[1].img}" alt = "" >
+        //     <h2>${students[1].name}</h2>
+        //     <h3>${students[1].skill}</h3>
+        // </div > `
+        // student3.innerHTML = `<div class="std">
+        //     <img src = "${students[2].img}" alt = "" >
+        //     <h2>${students[2].name}</h2>
+        //     <h3>${students[2].skill}</h3>
+        // </div > `
+
+    </script>
+</body>
+
+</html>
